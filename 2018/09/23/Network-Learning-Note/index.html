@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-circle.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="网络,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="编码方式曼彻斯特编码   位周期中心的向上跳变代表0，位周期中心向下跳变代表1. 差分曼彻斯特编码    在每一位的中心处始终有跳变。位开始边界有跳变代表0，位开始边界没有跳变代表1 千兆 Mbit">
+<meta name="keywords" content="网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络相关学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/09/23/Network-Learning-Note/index.html">
+<meta property="og:site_name" content="TinyD">
+<meta property="og:description" content="编码方式曼彻斯特编码   位周期中心的向上跳变代表0，位周期中心向下跳变代表1. 差分曼彻斯特编码    在每一位的中心处始终有跳变。位开始边界有跳变代表0，位开始边界没有跳变代表1 千兆 Mbit">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/09/23/Network-Learning-Note/UDP协议包头.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/23/Network-Learning-Note/运输层.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/23/Network-Learning-Note/三报文握手.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/23/Network-Learning-Note/四次挥手.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/23/Network-Learning-Note/TCP的传输状态.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/23/Network-Learning-Note/滑动窗口协议.gif">
+<meta property="og:image" content="http://yoursite.com/2018/09/23/Network-Learning-Note/TCP流量控制算法.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/23/Network-Learning-Note/IP报头.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/23/Network-Learning-Note/IP服务类型部分.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/23/Network-Learning-Note/公私钥算法.png">
+<meta property="og:updated_time" content="2018-11-17T12:55:20.606Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网络相关学习笔记">
+<meta name="twitter:description" content="编码方式曼彻斯特编码   位周期中心的向上跳变代表0，位周期中心向下跳变代表1. 差分曼彻斯特编码    在每一位的中心处始终有跳变。位开始边界有跳变代表0，位开始边界没有跳变代表1 千兆 Mbit">
+<meta name="twitter:image" content="http://yoursite.com/2018/09/23/Network-Learning-Note/UDP协议包头.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/09/23/Network-Learning-Note/">
+
+
+
+
+
+  <title>网络相关学习笔记 | TinyD</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband">
+      <a href="https://github.com/TinyD0409"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/forkme_right_red.png" alt="Fork me on GitHub"></a>
+    </div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">TinyD</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+    <a href="https://github.com/TinyD0409" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub">
+      <svg width="80" height="80" viewbox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+    <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+      </svg>
+</a>
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/23/Network-Learning-Note/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TinyD">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/oscar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TinyD">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">网络相关学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-23T21:55:23+08:00">
+                2018-09-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Note/" itemprop="url" rel="index">
+                    <span itemprop="name">Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="编码方式"><a href="#编码方式" class="headerlink" title="编码方式"></a>编码方式</h4><p>曼彻斯特编码   位周期中心的向上跳变代表0，位周期中心向下跳变代表1.</p>
+<p>差分曼彻斯特编码    在每一位的中心处始终有跳变。位开始边界有跳变代表0，位开始边界没有跳变代表1</p>
+<p>千兆 Mbit<br><a id="more"></a><br>指数退避（防止数据同时发送（网络降速</p>
+<p>IP地址转为mac地址</p>
+<p>单拨</p>
+<p><strong>wireshark</strong> 抓包工具</p>
+<p>子网掩码  1.1.1./24 。左边全是1 ,  255.255.255  就是24个1 。</p>
+<p><strong>internet</strong>（互连网）是一个通用名词，泛指由多个计算机网络互连而成的计算机网络。在这些网络之间的通信协议（即通信规则）可以任意选择，不一定非要使用TCP/IP协议</p>
+<p><strong>Internet</strong>（互联网、因特网）则是一个专用名词，指当前全球最大的、开放的、由众多网络相互连接而成的特定互连网，采用ICP/IP协议族作为通信的规则，且其前身是美国的ARPANET</p>
+<p>互联网发展的第三阶段 特点是逐渐形成了多层次ISP结构的互联网</p>
+<p><strong>ISP</strong>又常译为互联网服务提供商 如 中国移动 中国联通 中国电信</p>
+<p>所谓 “上网” 指 “（通过某ISP获得的IP地址）接入到互联网”</p>
+<p><strong>网络拓扑</strong>，指构成网络的成员间特定的排列方式。分为物理的，及真实的、或者逻辑的，即虚拟的两种。如果两个网络的连接结构相同，我们就说它们的网络拓扑相同，尽管它们各自内部的物理接线、节点间距离可能会有不同。 </p>
+<p><strong>端系统</strong> 指处在互联网边缘的部分就是连接在互联网上的所有主机  （互联网的末端）</p>
+<p><strong>计算机间的通信</strong>指：主机A和主机B进行通信，实际上就是 ：主机A的某个进程和主机B上的另一个进程进行通信</p>
+<p><strong>通信方式</strong>通常可划分为两大类：客户-服务器方式（C/S方式 client/server 特例是 B/S browser/server）和对等方式（P2P方式 peer to peer）</p>
+<p><strong>客户程序</strong> 被用户调用后运行，在通信时主动向远地服务器发起通信（请求服务）。因此，客户程序必须知道服务器程序的地址</p>
+<p><strong>服务器程序</strong> 专门用来提供服务的程序，可同时处理多个远地或本地客户的请求。系统启动后 自动调用并不断运行，被动的等待并接受来自各地的客户的通信请求。不需要知道客户程序的地址</p>
+<p><strong>对等方式</strong> 指两台主机在通信时并不区分哪一个是服务请求方哪一个是服务提供方。可以进行平等的对等的连接通信。（共享文件）   <strong>P2P方式</strong></p>
+<p>瘦腰模型 / 漏斗模型</p>
+<h4 id="不同类别的计算机网络"><a href="#不同类别的计算机网络" class="headerlink" title="不同类别的计算机网络"></a>不同类别的计算机网络</h4><ul>
+<li><p>按照网络的作用范围进行分类</p>
+<ul>
+<li>广域网WAN  </li>
+<li>城域网MAN </li>
+<li>局域网LAN </li>
+<li>个人区域网</li>
+</ul>
+</li>
+<li><p>按照网络的使用者进行分类</p>
+<p>公用网</p>
+<p>专用网</p>
+</li>
+</ul>
+<h4 id="计算机网络性能指标"><a href="#计算机网络性能指标" class="headerlink" title="计算机网络性能指标"></a>计算机网络性能指标</h4><ol>
+<li>速率  数据的传输速率   也称为 数据率 比特率 bps/s (bit per second)   Mbps/s Gbps/s</li>
+<li>带宽   在计算机网络中 带宽用来表示网络中某通道传送数据的能力，网络带宽表示在单位时间内网络中的某信道所能通过的“最高数据率”。</li>
+<li>吞吐量 （throughput）表示在单位时间内通过某个网络（信道、接口）的实际数据量。吞吐量受网络的带宽或网络的额定速率的限制。 如：对于一个1Gbit/s的以太网，就是说其额定速率是1Gbit/s,那么这个数值也是该以太网的吞吐量的绝对上限</li>
+<li><p>时延  （delay latency）指数据从网络的一端传送到另一端所需的时间 （也叫延迟）</p>
+<pre><code>发送/传播/处理/排队时延      提高发送速率只提高了发送时延。所以优化时候要可大头优化
+</code></pre></li>
+<li><p>时延带宽积  =  传播时延 * 带宽</p>
+</li>
+<li>往返时间 RTT</li>
+<li>利用率   信道利用率  网络利用率</li>
+</ol>
+<h4 id="非性能特征"><a href="#非性能特征" class="headerlink" title="非性能特征"></a>非性能特征</h4><p>费用 质量 标准化 可靠性 可扩展和可升级性 易于管理和维护</p>
+<h4 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h4><p>协议与划分层次</p>
+<p>​    网络协议由 <strong>语法</strong>（数据与控制信息的结构或格式） <strong>语义</strong>（需要发出何种控制信息） <strong>同步</strong>（事件实现顺序的详细说明） 组成</p>
+<p>​        复杂的网络协议应该分层。各层之间独立。某一层并不需要知道它的下一层是如何实现的 </p>
+<p>TCP/IP 四层体系结构 得到了广泛应用    应用层（TELNET，FTP，SMTP等） 运输层 （TCP传输控制协议 UDP用户数据报协议）网际层IP 网络接口层</p>
+<p>OSI的七层和TCP/IP的四层  结合为五层协议的体系结构  应用层 运输层 网络层 数据链路层 物理层</p>
+<p>​    <strong>应用层</strong>  任务是通过应用进程间的交互来完成特定网络应用 定义的是应用进程间通信和交互的规则</p>
+<p>​        数据发送接收和使用</p>
+<p>​    <strong>运输层</strong> 任务是负责向两台主机中进程之间的通信提供通用的数据传输服务</p>
+<p>​    <strong>网络层</strong> 负责为分组交换网上的不同主机提供通信服务 </p>
+<blockquote>
+<p>网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据报/IP数据报/分组 服务</p>
+</blockquote>
+<p>数据包被</p>
+<p>​    <strong>链路层</strong>   直接连接的之间的传输 以太网帧格式  生存时间（确切说是次数 确保不会是环 time to live    TTL） </p>
+<p>​        数据包被送到正确的局域机器</p>
+<p>​    <strong>物理层</strong> 物理层所传数据的单位是比特   </p>
+<p>​        01的正确发送与接收</p>
+<p>流量一般 计算网络层流量</p>
+<p>路由类似快递分拣   每一个路由只关心 IP地址的几位，来转发接收到的数据 </p>
+<p>每个路由器都有个路由表  也知道自己周围有哪些路由器的端口……还有路由协议 他们之间会沟通</p>
+<p>自己随便设置地址并没有用 路由地址一部分是电信公司设置的 要设置分配 可用可传输地址</p>
+<p>NAT  network address translation 网络地址转换  NAT可以套NAT（小区宽带就是）</p>
+<p>DNAT  SNAT   门口大爷帮忙发快递。解决公网无法用的ip</p>
+<p>动态端口映射表   也有静态的。</p>
+<p>主动发消息给NAT没用，要先发给别人，路由器会生成映射表，使接下来的消息知道是发给谁的。莫名来的消息路由器不知道转给谁，被丢掉。这样比较安全。电脑的135/137/139/23端口 暴露在外面，黑客在不断攻击他们，他们要是回应就死了……</p>
+<p>协议是水平的 服务是垂直的 。本层服务的实体只能看见服务而无法看见下面的协议 （下面的协议对上面的实体透明）只有那些能被高一层的实体 “看得见”的功能才能称为“服务”</p>
+<h4 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h4><p>VPN工作在链路层 VPN相当于 虚拟了一张网卡  仿佛插在了目标局域网（电脑带到了公司/国外）</p>
+<h4 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h4><p>协议  ： HTTP FTP SMTP DNS IGMP</p>
+<p>应用层的许多协议都是基于客户服务器方式。客户是服务请求方，服务器是服务提供方</p>
+<p>DDNS 域名和IP动态绑定。ip变了 将域名重新指向新的IP</p>
+<p><a href="http://www.ip138.com" target="_blank" rel="noopener">www.ip138.com</a></p>
+<p>域名就是用有意义的字母指向一个IP。域名解析   路由器可以根据域名解析出ip，随机返回，如果要返回离用户最近的ip要花钱</p>
+<p>域名只是域名，拥有一个域名可以让它指向任何的IP</p>
+<p>cmd运行 <code>nslookup baidu.com 192.168.31.1</code></p>
+<p>DNS domain name system   下层基于UDP   端口号53</p>
+<p>ipv6 over ipv4</p>
+<h6 id="UDP协议-端口号"><a href="#UDP协议-端口号" class="headerlink" title="UDP协议 端口号"></a>UDP协议 端口号</h6><ul>
+<li><p>DNS 域名系统 域名到IP地址的解析是由分布在互联网上的许多域名服务器程序共同完成的 </p>
+<ul>
+<li><p>解析过程 ： 当某应用进程需要把主机名解析为IP地址时，该应用进程就调用解析程序，并成为DNS的一个客户，把待解析的域名放在DNS请求报文中，以UDP用户数据报方式发给本地域名服务器。本地域名服务器在查找域名后，把对应的IP地址在回答报文中返回。应用进程获得目的主机的IP地址后即可通信</p>
+<ul>
+<li><p>主机向本地域名服务器的查询一般采用递归查询</p>
+<ul>
+<li>如果主机所询问的本地域名服务器不知道被查询域名的IP地址，那么本地域名服务器就以DNS客户的身份 向其他域名服务器继续发出查询请求报文（替主机继续查询），而不是让该主机自己进行下一步的查询。</li>
+</ul>
+</li>
+<li><p>本地域名服务器向根域名服务器的查询通常是采用迭代查询</p>
+<ul>
+<li>当根域名服务器收到本地域名服务器发出的迭代查询请求报文时，要么给出所要查询的IP地址，要么告诉本地域名服务器：你下一步应当向哪个域名服务器进行查询。</li>
+</ul>
+</li>
+<li>本地域名服务器中需要高速缓存，主机中也有。而且定期维护数据库，检查域名服务器以获取新的映射信息。</li>
+</ul>
+</li>
+<li><p>域名结构  </p>
+<ul>
+<li>顶级域名：cn/com/org……</li>
+<li>二级域名：baidu/ibm/com等</li>
+<li>三级域名：www/mail 等</li>
+</ul>
+</li>
+<li>根域名服务器 ：根域名服务器是最高层次 最重要的域名服务器。不管哪一个本地域名服务器，对互联网上任何一个域名进行解析，只要自己无法解析，就首先要求助于根域名服务器。所有跟域名服务器只使用13个不同IP地址的域名。 a~m.rootservers.net</li>
+<li>顶级域名服务器（TLD服务器）</li>
+<li>权限域名服务器</li>
+<li>本地域名服务器</li>
+<li>为提高域名服务器的可靠性，DNS域名服务器都把数据复制到几个域名服务器来保存。一个是主域名服务器，其他是辅助域名服务器</li>
+</ul>
+</li>
+<li><p>动态主机配置协议 DHCP(Dynamic Host Configuration Protocol)</p>
+<p>即插即用连网。这种机制允许一台计算机加入新的网络和获取IP地址不用手工参与</p>
+<p>DHCP协议  自动获取ip，不用手动设置 （发送广播，第一个响应的DHCP作为自己的IP）下层基于UDP  端口号67</p>
+<ul>
+<li>把协议软件参数化，一台计算机和另一台计算机的许多区别 可以通过一些不同的参数来体现。在协议软件运行前，必须给每个参数赋值。在协议软件中给这些参数赋值的动作叫 <strong>协议配置</strong><ul>
+<li>连接到互联网的计算机的协议软件需要配置：IP地址、子网掩码、默认路由器的IP地址、域名服务的IP地址</li>
+</ul>
+</li>
+<li>DHCP适合于经常移动位置的计算机</li>
+</ul>
+</li>
+</ul>
+<h6 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h6><p>是一个文本协议。请求/响应模型，一次完整的HTTP协议过程必须是包含这两个过程的，这两个过程完成以后<br>请求就结束了。不同于TCP可以一直收一直发，直到一端或两端把连接断掉。<br>由于请求和响应都可以带上若干HTTP首部，此协议也非常容易扩展。</p>
+<ul>
+<li><p>请求相关首部：</p>
+<ul>
+<li>User-Agent，浏览器标识，可以用js通过navigator.userAgent读到</li>
+<li>Host，用来告诉服务器，浏览器是通过什么域名来连接到服务器的，带端口号。可用此特性来实现同一个服务器服务多个网站，coding/github pages就是这么做的</li>
+<li>Referer，告诉服务器，浏览器是在哪个页面请求的这个资源，页面完整地址。可以用来防盗链。</li>
+<li>If-None-Match(请求)/ETag(响应): ‘hash of the resource’</li>
+<li>If-Modified-Since(请求)/Last-Modified(响应): IOS Time String,如果不需要更新，</li>
+<li>服务器就会响应304请求 304 Not Modified </li>
+</ul>
+</li>
+<li><p>响应相关首部：</p>
+<ul>
+<li><p>Content-Security-Policy：告诉浏览器，页面里的JS，甚至是其它资源能否被执行。允许哪些域下的页面里的js请求此资源</p>
+</li>
+<li><p>CORS        <em>Cross-Origin Resource Sharing</em> : <a href="http://www.baidu.com:8080" target="_blank" rel="noopener">http://www.baidu.com:8080</a> 跨域资源共享 允许应用服务器进行跨域访问控制</p>
+</li>
+<li><p>Access-Control-Max-Age: 86400 表明此次允许跨域访问的时效是多久，过期后浏览器会重新发送OPTIONS请求以重新询问服务器是否还可以跨域访问。</p>
+</li>
+<li><p>Content-Length: 配合Connection:keep-alive可以实现Http pipe line</p>
+</li>
+<li><p>Content-Type: type/substype; charset=utf-8</p>
+</li>
+<li><p>Date: Thu, 13 Jul 2017 01:59:28 GMT</p>
+</li>
+<li><p>Expires: ISO Time String 本资源的过期时间，过期之前，浏览器可以选择完全不发请求，直接</p>
+<p>使用本地缓存的版本。过后必须发请求，但可以带上If-Modify-Since，响应也可能是304。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="cookies相关问题"><a href="#cookies相关问题" class="headerlink" title="cookies相关问题"></a>cookies相关问题</h4><p>cookies是为了解决 早期的 服务器无法知道两个请求是否来自于同一个浏览器，而出现的。</p>
+<p>简单地说，cookie 就是浏览器储存在用户电脑上的一小段文本文件。cookie 是纯文本格式，不包含任何可执行的代码。一个 Web 页面或服务器告知浏览器按照一定规范来储存这些信息，并在随后的请求中将这些信息发送至服务器，Web 服务器就可以使用这些信息来识别不同的用户。大多数需要登录的网站在用户验证成功之后都会设置一个 cookie，只要这个 cookie 存在并可以，用户就可以自由浏览这个网站的任意页面。再次说明，cookie 只包含数据，就其本身而言并不有害。 </p>
+<p><a href="http://bubkoo.com/2014/04/21/http-cookies-explained/" target="_blank" rel="noopener">HTTP cookies 详解 Nicholas C. Zakas </a></p>
+<p>类似 点餐时候拿的号码牌。cookies就是服务器下发给用户的身份验证号码牌</p>
+<p>set-cookies 设置 httponly：true   无法被js document.cookies 读到 也无法修改</p>
+<h6 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h6><p>由服务器调用客户端的JS代码</p>
+<p>JSONP就是 服务器返回了一段JS ，这段js在客户端运行的时候，调用了客户端的代码……</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//要引用的服务器端 src a.js</span><br><span class="line">f([&#123;</span><br><span class="line">    "name":"zhangsan"</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    "name":"lisi"</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    "name":"wangwu"</span><br><span class="line">&#125;])</span><br><span class="line"></span><br><span class="line">//客户端我们的代码 </span><br><span class="line">&lt;script src="a.js"&gt;</span><br><span class="line">function f(data)&#123;</span><br><span class="line">    console.log(data)</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">在实际应用中不可能所有的数据都包在f这个函数里，所以前后端要协商</span><br><span class="line">在应用中 前端发出请求 script.src = 'http://192.168.31.124:8080/user.js?callback=foobar' 请求返回的数据包含在 foobar这个函数里</span><br><span class="line">foobar 只能放在URL里，不能用post放在请求体里。除了表单 的post，浏览器都是发get请求</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<h4 id="运输层"><a href="#运输层" class="headerlink" title="运输层"></a>运输层</h4><p>TCP  三次握手 四次分手 四元组</p>
+<p>UDP   在IP地址前加上了端口号 </p>
+<p><img src="/2018/09/23/Network-Learning-Note/UDP协议包头.png" alt="UDP协议包头"></p>
+<p>过程中任意一个校验和失败 都会丢掉 。不保证送达。不保证按序。保证正确</p>
+<p>过了这个村就没用的 </p>
+<p>游戏 音频 视频 网络对时间 实时性比较高的会选择udp 丢1、2个包不影响 </p>
+<p>网络时间校准 互相发送数据包 求平均值 进行校准 rtt   </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//socket API 允许应用程序访问连网协议的应用编程接口 API（运输层和应用层之间的接口）</span></span><br><span class="line">$ node</span><br><span class="line"></span><br><span class="line">udpPort = dgram.createSocket(<span class="string">'udp4'</span>)</span><br><span class="line"></span><br><span class="line">udpPort.bind(<span class="number">10086</span>)</span><br><span class="line"></span><br><span class="line">udpPort.on(<span class="string">'message'</span>,(msg,info)=&gt;&#123;<span class="built_in">console</span>.log(info,msg.toString())&#125;)</span><br><span class="line"></span><br><span class="line">udpPort.send(<span class="string">'摇曳露营天下第一'</span>,<span class="number">10086</span>,<span class="string">'192.168.31.124'</span>)</span><br><span class="line"></span><br><span class="line">udpSocket.setBroadcase(<span class="literal">true</span>)</span><br><span class="line"></span><br><span class="line">udpSocket.addMembership(<span class="string">"239.123.133"</span>) <span class="comment">//多播 / 组播</span></span><br></pre></td></tr></table></figure>
+<p>广播 红蜘蛛就是用 的udp的广播 所以人多性能也不会差</p>
+<p>udp还支持多播   只能在局域网使用</p>
+<p>单播是单独发</p>
+<ul>
+<li><p>从通信和信息处理的角度看，运输层向它上面的应用层提供通信服务，属于面向通信部分的最高层，同时也是用户功能中的最底层</p>
+</li>
+<li><p>运输层向高层用户<strong>屏蔽</strong>了下面网络核心的细节</p>
+</li>
+<li><p>网络层为主机间提供逻辑通信，运输层为进程之间提供端到端的逻辑通信</p>
+<p><img src="/2018/09/23/Network-Learning-Note/运输层.png" alt="运输层"></p>
+</li>
+<li><p>根据应用程序的不同需求，运输层需要有两种不同的运输协议，</p>
+<ul>
+<li><p>面向连接的TCP  传输控制协议（Transmission Control Protocol）</p>
+<p>   传送数据前必须先建立连接 ，传送结束后要释放连接。不提供广播、多播服务。可靠交付。占用处理机资源多</p>
+<p>   TCP连接的端点是抽象的套接字 <code>注：socket有多种解释</code></p>
+<p>   <code>套接字socket = (IP地址:端口号)</code></p>
+<p>   <code>TCP连接::={socket1,socket2} = {(IP1:port1),(IP2:port2)}</code></p>
+</li>
+<li><p>无连接的UDP  用户数据报协议 （User Datagram Protocol）</p>
+<p>   不需要建立连接。远地主机的运输层在收到UDP报文后，不需要给出确认。使用尽最大努力交付，不保证可靠交付，但某些情况下 是最有效的工作方式</p>
+</li>
+</ul>
+</li>
+<li><p>协议端口号 / 端口（Port）：虽然通信的终点是应用进程，但只要把所传送的报文交到目的主机某个合适的目的端口，剩下工作（最后交付目的进程）由TCP/UDP完成</p>
+<p>  这种端口是软件端口 ，和交换机上的硬件端口不同。软件端口是应用层的各种协议进程与运输实体进行层间交互的一种地址，硬件端口是不同硬件设备进行交互的接口</p>
+</li>
+<li><p>socket 套接字  相关解说 <a href="https://www.cnblogs.com/dolphinX/p/3460545.html" target="_blank" rel="noopener">https://www.cnblogs.com/dolphinX/p/3460545.html</a></p>
+<p>  websocket  会时不时发一个心跳，确定我还在你还在……</p>
+<p>  nat 路由 会 断 </p>
+<p>  分帧</p>
+<p>  这个画板 就是websocket实现的   <a href="http://4.cddm.me:8088" target="_blank" rel="noopener">http://4.cddm.me:8088</a></p>
+</li>
+<li><p>TCP的运输连接管理</p>
+<p>  运输连接有三个阶段 ： 连接建立、数据传送、连接释放</p>
+<p>连接建立采用客户服务器方式。主动发起连接建立的应用叫客户，被动等待连接建立的应用进程叫服务器</p>
+<ul>
+<li>连接建立的过成 叫握手 。有著名的 <strong>三次握手</strong>  在不可靠的信道 可靠的传输信息<blockquote>
+<p>在Google Groups的TopLanguage中看到一帖讨论TCP“三次握手”觉得很有意思。贴主提出“TCP建立连接为什么是三次握手？”的问题，在众多回复中，有一条回复写道：“这个问题的本质是, 信道不可靠, 但是通信双发需要就某个问题达成一致. 而要解决这个问题, 无论你在消息中包含什么信息, 三次通信是理论上的最小值. 所以三次握手不是TCP本身的要求, 而是为了满足”在不可靠信道上可靠地传输信息”这一需求所导致的. 请注意这里的本质需求,信道不可靠, 数据传输要可靠. 三次达到了, 那后面你想接着握手也好, 发数据也好, 跟进行可靠信息传输的需求就没关系了. 因此,如果信道是可靠的, 即无论什么时候发出消息, 对方一定能收到, 或者你不关心是否要保证对方收到你的消息, 那就能像UDP那样直接发送消息就可以了.”。这可视为对“三次握手”目的的另一种解答思路。</p>
+</blockquote>
+</li>
+</ul>
+<p>A发的消息，B收到了，B告诉A我能收到，然后A告诉B你的消息我也能收到</p>
+<p><img src="/2018/09/23/Network-Learning-Note/三报文握手.png" alt=""></p>
+<ul>
+<li>TCP的连接释放 <strong>四次挥手 </strong></li>
+</ul>
+<p>A告诉B我没有东西发给你了(1)，B说OK，知道了(2)，继续把需要发送的东西发过去。最后说我也没有东西发给你了(3)，A说OK ，知道了(4)</p>
+</li>
+</ul>
+<p><img src="/2018/09/23/Network-Learning-Note/四次挥手.png" alt="四次挥手"></p>
+<p>​     总体TCP连接的各种状态关系如下图</p>
+<p><img src="/2018/09/23/Network-Learning-Note/TCP的传输状态.png" alt="TCP的传输状态"></p>
+<ul>
+<li><p>TCP的4元组     SIP   DIP  SPT  DPT</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">'net'</span>)</span><br><span class="line"><span class="keyword">var</span> server = net.createServer()</span><br><span class="line"><span class="comment">//js语言中各种东西都被抽象成事件</span></span><br><span class="line">server.on(<span class="string">'connection'</span>,conn =&gt; &#123;<span class="comment">//conn就是抽象出来的连接   只关心当前这个连接</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'a connection estabilshed:'</span>,conn.remoteAddress,conn.remotePort)</span><br><span class="line">    conn.on(<span class="string">'data'</span>,data =&gt; &#123; <span class="comment">//处在server事件里面，借用了外面的conn，产生闭包</span></span><br><span class="line">       <span class="built_in">console</span>.log(conn.remoteAddress,data.toString())</span><br><span class="line">       conn.write(data.toString().toUpperCase())</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">server.listen(<span class="number">10010</span>,()=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'server listening on port'</span>,<span class="number">10010</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">////服务端</span></span><br><span class="line">conn = net.connect(<span class="number">10010</span>,<span class="string">'192.168.31.124'</span>)</span><br><span class="line">conn.write(<span class="string">"xxx"</span>)</span><br><span class="line">conn.write(<span class="string">"xxx"</span>.repeat(<span class="number">9</span>))</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">20</span>;i++)&#123;conn.write(<span class="string">"xxx"</span>)&#125;</span><br><span class="line"><span class="comment">//结束</span></span><br><span class="line">conn.end()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ARQ协议</p>
+<p>  <strong>自动重传请求</strong>（Automatic Repeat-reQuest，ARQ）是OSI模型中数据链路层和传输层的错误纠正协议之一。它通过使用确认和超时这两个机制，在不可靠服务的基础上实现可靠的信息传输。 </p>
+<ul>
+<li><p>停止并等待ARQ协议 的工作原理 </p>
+<ul>
+<li>发送点对接收点发送数据包，然后等待接收点回复ACK并开始计时</li>
+<li>在等待过程中 发送点停止发送新的数据包</li>
+<li>当数据包没有成功被接收时候，接收点不会发送ACK，这样发送点在等待一定时间后，重新发送数据包</li>
+<li>反复以上步骤直到收到从接收点发送的ACK</li>
+</ul>
+</li>
+<li><p>连续ARQ协议</p>
+<p>为了克服停止并等待ARQ协议长时间等待ACK的缺点。这个协议会连续发送一组数据包，然后再等待这些数据包的ACK</p>
+</li>
+</ul>
+</li>
+<li><p>滑动窗口协议        (用来实现对发送方的<strong>流量控制</strong>)</p>
+<p>  所谓流量控制就是让发送方的发送速率不要太快，要让接收方来得及接收</p>
+<p>  滑动窗口是tcp协议的精髓所在</p>
+<p>  <strong>滑动窗口机制</strong>   tcp zerowindowprobe （我可以继续发包了吗？） tcp zerowindowprobeAck（不行，还为0） 必须主动问，不然会产生死锁</p>
+<p>  为了简单起见设定发送方窗口大小为2，接受方大小为1。看下面图： </p>
+<p>  <img src="/2018/09/23/Network-Learning-Note/滑动窗口协议.gif" alt="滑动窗口协议"></p>
+<p>   一：初始态，发送方没有帧发出，发送窗口前后沿相重合。接收方0号窗口打开，等待接收0号帧； </p>
+<pre><code>二：发送方打开0号窗口，表示已发出0帧但尚确认返回信息。 此时接收窗口状态不变； 
+三：发送方打开0、1号窗口，表示0、1号帧均在等待确认之列。至此，发送方打开的窗口数已达规定限度，在未收到新的确认返回帧之 前，发送方将暂停发送新的数据帧。接收窗口此时状态仍未变； 
+四：接收方已收到0号帧，0号窗口关闭，1号窗口打开，表示准备接收1号帧。此时发送窗口状态不 变； 
+五：发送方收到接收方发来的0号帧确认返回信息，关闭0号窗口，表示从重发表中删除0号帧。此时接收窗口状态仍不变 
+六：发送方继续发送2号帧，2号窗口 打开，表示2号帧也纳入待确认之列。至此，发送方打开的窗口又已达规定限度，在未收到新的确认返回帧之前，发送方将暂停发送新的数据帧，此时接收窗口状态 仍不变； 
+七：接收方已收到1号帧，1号窗口关闭，2号窗口打开，表示准备接收2号帧。此时发送窗口状态不变； 
+八：发送方收到接收方发来的1号帧收毕的确认信 息，关闭1号窗口，表示从重发表中删除1号帧。此时接收窗口状态仍不变。
+</code></pre></li>
+</ul>
+<ul>
+<li><p>TCP的拥塞控制 </p>
+<p>在计算机网络中的链路容量（即带宽）、交换节点中的缓存和处理机等，都是网络的资源。在某段时间，若对网络中某一资源的需求超过了该资源所能提供的可用部分，网络的性能就要变坏。这种情况较拥塞(congestion) </p>
+<p>拥塞控制就是防止过多的数据注入网络中，这样可以使网络中的路由器或链路不致过载。拥塞控制所要做的都有一个前提，就是网络能承受现有的网络负荷。</p>
+<p>拥塞控制是一个全局性的过程，涉及到所有的主机、路由器等。（流量控制可能是拥塞控制的一个方法</p>
+<p>拥塞控制的算法有四种：慢开始、拥塞避免、快重传、快恢复</p>
+<ul>
+<li><p>慢开始 因为开始并不清楚网络的负荷情况，所以先探测一下，即由小到大逐渐增大发送窗口</p>
+</li>
+<li><p>拥塞避免     加法增大（Additive Increase） 乘法减小（Multiplicative Decrease）AIMD算法<br>和式增加，积性减少</p>
+<p><img src="/2018/09/23/Network-Learning-Note/TCP流量控制算法.png" alt="TCP流量控制算法"></p>
+<p>图中4号点那里 知道只丢失部分数据，所以执行的快恢复算法 </p>
+</li>
+<li><p>现在有 BBR算法   极致 不会网络拥塞  加速 （谷歌开发，YouTube应用）来自于Google的黑科技，目的是通过优化和控制TCP的拥塞，充分利用带宽并降低延迟，起到神奇般的加速效果。 </p>
+<p><a href="https://www.zhihu.com/question/53559433" target="_blank" rel="noopener">Linux Kernel 4.9 中的 BBR 算法与之前的 TCP 拥塞控制相比有什么优势？</a></p>
+<p><a href="https://blog.csdn.net/dog250/article/details/53730374" target="_blank" rel="noopener">令人躁动一时且令人不安的TCP BBR算法</a></p>
+<p>  致力于解决两个问题 ：1.在有一定丢包率的网络链路上充分利用带宽。2.降低网络链路上的buffer占用率，从而降低延迟</p>
+<p>TCP BBR 解决带宽和延迟无法同时测准的方法是：交替测量带宽和延迟；用一段时间内的带宽极大值和延迟极小值作为估计值。</p>
+<p>在连接刚建立的时候，TCP BBR 采用类似标准 TCP 的慢启动，指数增长发送速率。然而标准 TCP 遇到任何一个丢包就会立即进入拥塞避免阶段，它的本意是填满水管之后进入拥塞避免，然而（1）如果链路的错误丢包率较高，没等到水管填满就放弃了；（2）如果网络里有 buffer，总要把缓冲区填满了才会放弃。</p>
+<p>TCP BBR 则是根据收到的确认包，发现有效带宽不再增长时，就进入拥塞避免阶段。（1）链路的错误丢包率只要不太高，对 BBR 没有影响；（2）当发送速率增长到开始占用 buffer 的时候，有效带宽不再增长，BBR 就及时放弃了（事实上放弃的时候占的是 3 倍带宽 × 延迟，后面会把多出来的 2 倍 buffer 清掉），这样就不会把缓冲区填满</p>
+<p>TCP BBR 不再使用丢包作为拥塞的信号，也不使用 “加性增，乘性减” 来维护发送窗口大小，而是分别估计极大带宽和极小延迟，把它们的乘积作为发送窗口大小。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>tcp 一个包最大len= 1440 </p>
+<p><strong>顺序号</strong> <strong>确认号</strong> 都是字节</p>
+<p>流量控制 拥塞控制</p>
+<p>SYN floog攻击 类似ping攻击 只是狂发，来让目标无暇接收别人的信息</p>
+<p>BBR算法 极致 不会网络拥塞  加速 （谷歌开发，YouTube应用）</p>
+<h4 id="网络层-网际层-IP层"><a href="#网络层-网际层-IP层" class="headerlink" title="网络层 /网际层 /IP层"></a>网络层 /网际层 /IP层</h4><ul>
+<li><p>网际协议IP（IPv4）</p>
+<p>与IP协议配套使用的有三个协议</p>
+<ul>
+<li>地址解析协议ARP（Address Resolution Protocol）</li>
+<li>网际控制报文协议ICMP（Internet  control message protocol）</li>
+<li>网际组管理协议IGMP（Internet Group Management Protocol） IP多播相关</li>
+</ul>
+</li>
+<li><p>IP地址的特点</p>
+<ul>
+<li>每个IP地址由网络号和主机号两部分组成 。是一种分等级的地址结构</li>
+<li>IP地址是标志一台主机（或路由器）和一条链路的接口</li>
+<li>一个网络是指具有相同网络号net-id的主机集合。用转发器或网桥连接起来的若干个局域网仍为一个网络。具有不同网络号的局域网必须使用路由器进行互连</li>
+</ul>
+</li>
+<li><p>IP地址与硬件地址<br>硬件地址 就是物理地址 也是MAC地址<br>物理地址是数据链路层和物理层使用的地址<br>IP地址是网络层和以上各层使用的地址，是逻辑地址（使用软件实现的）<br>IP地址放在IP数据报的首部，硬件地址放在MAC帧的首部。在网络层和网络层以上使用的是IP地址，数据链路层及以下使用的是硬件地址<br>一个路由器连接两个局域网，那么他就有两个硬件地址<br>在局域网的链路层，只能看见MAC帧。<br>尽管互连在一起的网络的硬件地址体系各部相同，但IP层抽象的互联网却<strong>屏蔽</strong>了下层这些复杂的细节。只要我们在网络层讨论问题，就能使用统一的、抽象的IP地址 研究主机和主机或路由器之间的通信。</p>
+</li>
+<li><p>地址解析协议</p>
+<ul>
+<li>知道IP地址 找出相应的硬件地址。ARP地址解析协议。</li>
+<li>IP协议使用了ARP协议，通常把ARP协议划归网络层。但ARP协议的用途是为了从网络层使用的IP地址，解析出在链路层使用的硬件地址，也有把他划分在链路层。</li>
+<li>每台主机设有一个ARP高速缓存 。里面有本局域网上各主机和路由器的IP地址到硬件地址的映射表</li>
+</ul>
+</li>
+<li><p>IP报文结构</p>
+<p>​    具体 内容 <a href="https://blog.csdn.net/ce123_zhouwei/article/details/17453033" target="_blank" rel="noopener">具体讲解</a></p>
+</li>
+</ul>
+<p><img src="/2018/09/23/Network-Learning-Note/IP报头.png" alt="IP报头"></p>
+<ul>
+<li></li>
+<li><p>对应的各部分 内容 （都是用二进制，不够部分用0补齐）</p>
+</li>
+<li><p><img src="/2018/09/23/Network-Learning-Note/IP服务类型部分.png" alt="服務類型"></p>
+</li>
+<li><p>网际控制报文协议 ICMP </p>
+<ul>
+<li><p>Internet Control Message Protocol 允许主机或路由器报告差错情况和提供有关异常情况的报告</p>
+</li>
+<li><p>ICMP一个重要应用 是 分组网间探测 PING（packet interNet Groper），用来测试两台主机之间的连通性。<code>ping hostname</code></p>
+</li>
+<li><p>另一个应用是traceroute。用来跟踪一个分组从源点到终点的路径。<code>tracert hostname</code>    time to live    TTL  通过多少次跳转 到目标主机上。路由算法。<br>ping flood 早年的网络攻击 cmd中 输入 ping baidu.com   tracert baidu.com</p>
+</li>
+</ul>
+</li>
+<li><p>路由器   </p>
+<ul>
+<li>路由器是一种具有多个输入端口或多个输出端口的专用计算机，任务是转发分组。 路由选择处理机 路由选择协议-路由表</li>
+<li>路由器的队列通常按照“先进先出”FIFO的规则处理到来的分组，而由于队列长度总是有限的，因此当队列已满时，以后再到达所有分组（如果能排队 这些分组都将排在队列尾部）将都被丢弃。这就叫<strong>尾部丢弃策略</strong>（tail-drop-policy)</li>
+</ul>
+</li>
+<li><p>IP多播  </p>
+<ul>
+<li><p>一个源点发送到多个终点，一对多的通信。 软件更新 交互式会议 实时信息交付</p>
+</li>
+<li><p>IGMP 协议 让连接在本地局域网上的多播路由器知道本局域网上是否有主机参加或退出某个多播组</p>
+</li>
+</ul>
+</li>
+<li><p>VPN （virtual private network) 虚拟专用网</p>
+</li>
+<li><p>NAT （Network Address Translation） 网络地址转换</p>
+<p>本质为解决IPv4地址不够用情况 </p>
+<ul>
+<li>普通路由器在转发IP数据报时，对于源IP地址或目的IP地址都是不改变。但NAT路由器在转发IP数据报时，一定要更换其IP地址（转换源IP地址或目的IP地址）</li>
+<li>普通路由器在转发分组时，是工作在网络层。但NAPT路由器还要查看和转换运输层的端口号，这本来是运输层的范畴。</li>
+</ul>
+</li>
+</ul>
+<p>将网络互相连接起来要使用中间设备<br> 物理层的中间设备叫转发器<br> 链路层的中间设备 叫网桥 / 桥接器<br> 网络层 的中间设备叫路由器<br> 网络层以上的叫网关。用网关连接两个不兼容的系统需要在高层进行协议转换</p>
+<p>公私钥算法</p>
+<p><img src="/2018/09/23/Network-Learning-Note/公私钥算法.png" alt="公私钥算法"></p>
+<p>RSA加密算法（RSA代表三个人）</p>
+<p>ECDSA算法</p>
+<p>证书链/信任链    确定 你传递消息的那个人就是那个人，不是伪造的  （有时候网站会跳出查看证书）偷过来的证书也没有用，又不能改，偷过去也是证明这件事</p>
+<p>证书机构很重要  CA机构（沃通机构）</p>
+<p>中间运用MD5  sha1    hash 表相关加密方式  </p>
+<p>cert 证书管理</p>
+<p>局域网内的攻击</p>
+<p>ping攻击</p>
+<p>广播风暴</p>
+<p>ARP欺骗</p>
+<p>DHCP</p>
+<p>DNS欺骗</p>
+<p>如何解决/判断网页打不开的问题</p>
+<p>第一步 ping内网</p>
+<p>ping网关</p>
+<p>ping自己（路由器）</p>
+<p>网线断了/是否是自动获取IP/是否有DHCP服务器</p>
+<p>ping baidu.com</p>
+<p>ping不通 域名解析失败  连接不了DNS服务器</p>
+<p>ping 114.114.114.114 （直接ping下国内的免费 DNS 服务器  //不同可能是欠费</p>
+<p>ping通ip但ping不通域名   改dns地址</p>
+<p>还不通  通过代理上网 ，无法与代理建立连接</p>
+<p>ssh -R rport:localip:lport root@vpsip -p port -N 通过本机与vpsip机器的ssh连接，</p>
+<p> 让vpsip的rport端口相当于localip机器的lport端口 </p>
+<p>ssh 连接的接口通过 -p port 来指定 -N代表不执行shell  </p>
+<p>ssh -L localip:localport:remoteip:remoteport root@vpsip -p port -N 通过本机与vpsip机器的ssh连接，</p>
+<p>让localip的localport相当于remoteip的remoteport  </p>
+<p>ssh -D localport user@vpsip -p sshport 在本地localport开一个socks代理，通过ssh连接让vpsip机器来转发  </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/网络/" rel="tag"><i class="fa fa-tag"></i> 网络</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/23/SQL-Learning-Note/" rel="next" title="数据库学习笔记">
+                <i class="fa fa-chevron-left"></i> 数据库学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/03/Node-js-Learning-Note/" rel="prev" title="Node.js 学习笔记">
+                Node.js 学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/oscar.png" alt="TinyD">
+            
+              <p class="site-author-name" itemprop="name">TinyD</p>
+              <p class="site-description motion-element" itemprop="description">stay hungry stay foolish</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/TinyD0409" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:ningkid345@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#编码方式"><span class="nav-number">1.</span> <span class="nav-text">编码方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不同类别的计算机网络"><span class="nav-number">2.</span> <span class="nav-text">不同类别的计算机网络</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算机网络性能指标"><span class="nav-number">3.</span> <span class="nav-text">计算机网络性能指标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非性能特征"><span class="nav-number">4.</span> <span class="nav-text">非性能特征</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算机网络体系结构"><span class="nav-number">5.</span> <span class="nav-text">计算机网络体系结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链路层"><span class="nav-number">6.</span> <span class="nav-text">链路层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用层"><span class="nav-number">7.</span> <span class="nav-text">应用层</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#UDP协议-端口号"><span class="nav-number">7.0.1.</span> <span class="nav-text">UDP协议 端口号</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#HTTP协议"><span class="nav-number">7.0.2.</span> <span class="nav-text">HTTP协议</span></a></li></ol></li></ol><li class="nav-item nav-level-4"><a class="nav-link" href="#cookies相关问题"><span class="nav-number">8.</span> <span class="nav-text">cookies相关问题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#JSONP"><span class="nav-number">8.0.1.</span> <span class="nav-text">JSONP</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运输层"><span class="nav-number">9.</span> <span class="nav-text">运输层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络层-网际层-IP层"><span class="nav-number">10.</span> <span class="nav-text">网络层 /网际层 /IP层</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TinyD</span>
+
+  
+</div>
+
+
+ <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+ -->
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+  
+</body>
+</html>

@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-circle.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="stay hungry stay foolish">
+<meta name="keywords" content="TinyD">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TinyD">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="TinyD">
+<meta property="og:description" content="stay hungry stay foolish">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TinyD">
+<meta name="twitter:description" content="stay hungry stay foolish">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/">
+
+
+
+
+
+  <title>TinyD</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband">
+      <a href="https://github.com/TinyD0409"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/forkme_right_red.png" alt="Fork me on GitHub"></a>
+    </div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">TinyD</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+    <a href="https://github.com/TinyD0409" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub">
+      <svg width="80" height="80" viewbox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+    <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+      </svg>
+</a>
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/16/前端学习感悟/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TinyD">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/oscar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TinyD">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/16/前端学习感悟/" itemprop="url">前端学习感悟</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-16T22:11:56+08:00">
+                2018-11-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Dairy/" itemprop="url" rel="index">
+                    <span itemprop="name">Dairy</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <ul>
+<li>实践是检验真理的唯一标准。多写，多想，多练，多试，多总结，多动脑。</li>
+<li>有些人就是创造历史造福人类的。但是世界是由大部分更普通的人一砖一瓦搭建的。所以创造不了历史，写不出帅气代码也不要太难过，即使是只能做到及格也并没什么可耻。认识差距，接受差距，客观看待差距，做到自己力所能及的事情，既要仰望星空，更要脚踏实地。</li></ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/16/前端学习感悟/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/06/Redux/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TinyD">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/oscar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TinyD">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/06/Redux/" itemprop="url">Redux</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-06T23:12:41+08:00">
+                2018-11-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Note/" itemprop="url" rel="index">
+                    <span itemprop="name">Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>解决非父子组件间传值的问题，使react不只作为视图层的框架。</p>
+<p>简单理解就是 组件中不储存数据 ，将数据都存储在一个 公共的区域store中，这时就不需要传递数据了。一个数据改变了，需要这个数据的其他组件可以感知到数据的变化<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/06/Redux/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/05/React-Learning-Note/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TinyD">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/oscar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TinyD">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/05/React-Learning-Note/" itemprop="url">React Learning Note</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-05T22:12:10+08:00">
+                2018-11-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Note/" itemprop="url" rel="index">
+                    <span itemprop="name">Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>支持IE8以上</p>
+<p>Facebook退出，2013年开源 </p>
+<p>React Fiber react16之后的叫法，底层算法的改良，更加流畅</p>
+<p>面向数据驱动的编程。只要数据改变 页面自己就会变。不用再自己操纵dom了。</p>
+<p>理念  all in js  。CSS文件也可以引入到街上js中</p>
+<p>我们也只关注数据就可以了</p>
+<p>实际开发中可以自底向上（便于测试） 也可以自顶向下（更容易）</p>
+<p>声名式开发  </p>
+<ul>
+<li>react vue 只关注数据</li>
+<li>可以与其他框架并存  （react只管理 挂载到的 id=”root” 的页面部分</li>
+<li>组件化</li>
+<li>单向数据流   父组件可以向子组件传值，但子组件不能直接修改父组件的数据，告诉父组件，让父组件自己修改（子=&gt;父通信）</li>
+<li>视图层框架  大型项目中，涉及非父子组件的传值，只用react并不合适，这时需要数据层的、框架，react将自己定位成视图层的框架，并不什么都做</li>
+<li>函数式编程 </li>
+</ul>
+<p>命令式开发  jQuery  大部分时间在操纵dom</p>
+<h5 id="与vue对比"><a href="#与vue对比" class="headerlink" title="与vue对比"></a>与vue对比</h5><p>处理 复杂项目时候选择方案更多  灵活性更高<br>vue 的 api更丰富 实现更简单 但灵活性相对较差</p>
+<p>项目的入口文件时 index.js</p>
+<p>页面展示的内容是 App.js文件 里 render出来的html</p>
+<p>App就是 一个组件 大写字母开头都是组件</p>
+<p>引入的react 为 引入react的语法，使其知道大写字母开头的都是组件</p>
+<p>reactdom库的意义 是把 内容挂载到 dom节点上</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="comment">//↑ 等价于 ↓</span></span><br><span class="line"><span class="comment">// import React from 'react';</span></span><br><span class="line"><span class="comment">// const Component = React.Component</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;   </span><br><span class="line">  <span class="comment">// 或 import React from 'react';</span></span><br><span class="line">  <span class="comment">// class App extends React.Component 一个 类 继承了 react.component 组件这个类之后就是 一个组件了</span></span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">//直接render标签的语法 叫 JSX</span></span><br><span class="line">    	&lt;div&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
+<h4 id="生命周期函数"><a href="#生命周期函数" class="headerlink" title="生命周期函数"></a>生命周期函数</h4><p>生命周期函数指在某一个时刻组件会自动调用执行的函数</p>
+<p>每个组件 不管是父组件还是子组件 都有这些生命周期函数</p>
+<p>render函数就是一个生命周期函数。（constructor其实也是，但它是ES6自带的，不算react的生命周期函数</p>
+<p><img src="/2018/11/05/React-Learning-Note/react生命周期.png" alt=""></p>
+<p>这个生命周期函数的组合在Fiber（<a href="https://zhuanlan.zhihu.com/p/26027085" target="_blank" rel="noopener">React Fiber是什么</a>）之后就显得不合适了，因为，<strong>如果要开启async rendering，在render函数之前的所有函数，都有可能被执行多次。</strong> </p>
+<p>v16.3新增了两个生命周期函数</p>
+<p><img src="/2018/11/05/React-Learning-Note/新版react生命周期.jpg" alt="新版react生命周期"></p>
+<ul>
+<li><p>初始化  在 constructor 进行 定义了state</p>
+</li>
+<li><p>mounting  </p>
+<ul>
+<li><code>v17.0将被删除</code> componentWillMount 在组件即将被挂载到页面的时刻自动执行（第一次挂载的时候      用例 ： 解决首页渲染白屏 </li>
+<li>render  挂载</li>
+<li>componentDidMount  组件被挂载到页面之后被自动执行（第一次挂载的时候  </li>
+</ul>
+</li>
+<li><p>updation</p>
+<ul>
+<li>shouldComponentUpdate  组件被更新前，会自动执行  （要return true   组件需要被更新吗？可以使组件不做无谓的render</li>
+<li><code>v17.0将被删除</code>  componentWillUpdate 组件被更新之前，shouldComponentUpdata之后 根据其返回结果 执行</li>
+<li>render</li>
+<li>componentDidUpdate 组件更新完之后 执行</li>
+<li><code>v17.0将被删除</code> componentWillReceiveProps    一个组件要从父组件接收参数，（只要父组件的render函数被重新执行了，子组件的这个生命周期函数就会被执行）  如果这个组件第一次存在于父组件中，不会执行。如果这个组件之前已经存在于父组件中，才会执行</li>
+</ul>
+</li>
+<li><p>unmounting </p>
+<ul>
+<li>componentWillUnmount   当这个组件即将被从页面中剔除的时候，执行   （例：todoitem 条目被删除的时候  render -》 componentWillUnmount -》 componentDidUpdate</li>
+</ul>
+</li>
+<li><p>getDerivedStateFromProps </p>
+<p>无论是Mounting还是Updating，也无论是因为什么引起的Updating，全部都会被调用。 所以生命周期图 那里  getDerivedStateFromProps 要延长</p>
+</li>
+</ul>
+<p>  通常来讲，在 <code>componentWillReceiveProps</code> 中，我们一般会做以下两件事，一是根据 props 来更新 state，二是触发一些回调，如动画或页面跳转等。在老版本的 React 中，这两件事我们都需要在 <code>componentWillReceiveProps</code> 中去做。而在新版本中，官方将更新 state 与触发回调重新分配到了 <code>getDerivedStateFromProps</code> 与 <code>componentDidUpdate</code> 中，使得组件整体的更新逻辑更为清晰。而且在 <code>getDerivedStateFromProps</code> 中还禁止了组件去访问 this.props，强制让开发者去比较 nextProps 与 prevState 中的值，以确保当开发者用到 <code>getDerivedStateFromProps</code> 这个生命周期函数时，就是在根据当前的 props 来更新组件的 state，而不是去做其他一些让组件自身状态变得更加不可预测的事情。 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// before</span></span><br><span class="line">componentWillReceiveProps(nextProps) &#123;  </span><br><span class="line">  <span class="keyword">if</span> (nextProps.translateX !== <span class="keyword">this</span>.props.translateX) &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123; </span><br><span class="line">      translateX: nextProps.translateX, </span><br><span class="line">    &#125;); </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// after</span></span><br><span class="line"><span class="keyword">static</span> getDerivedStateFromProps(nextProps, prevState) &#123;</span><br><span class="line">  <span class="keyword">if</span> (nextProps.translateX !== prevState.translateX) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      translateX: nextProps.translateX,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>getSnapshotBeforeUpdate(prevProps, prevState)</p>
+<p>与 <code>componentWillUpdate</code> 不同，<code>getSnapshotBeforeUpdate</code> 会在最终的 render 之前被调用，也就是说在 <code>getSnapshotBeforeUpdate</code> 中读取到的 DOM 元素状态是可以保证与 <code>componentDidUpdate</code> 中一致的。虽然 <code>getSnapshotBeforeUpdate</code> 不是一个静态方法，但我们也应该尽量使用它去返回一个值。这个值会随后被传入到 <code>componentDidUpdate</code> 中，然后我们就可以在 <code>componentDidUpdate</code> 中去更新组件的状态，而不是在 <code>getSnapshotBeforeUpdate</code> 中直接更新组件状态。 </p>
+</li>
+<li><p>componentDidCatch(error, info)   错误处理函数 像 try…catch</p>
+</li>
+</ul>
+<p>setState包含副作用</p>
+<p>在 React 正式开启异步渲染模式之后，许多常用组件的性能将很有可能迎来一次整体的提升。进一步来说，配合异步渲染，许多现在的复杂组件都可以被处理得更加优雅，在代码层面得到更精细粒度上的控制，并最终为用户带来更加直观的使用体验。 </p>
+<p>注意，这些生命周期函数 除了 render之外 其他都可以不在在组件中进行定义 。因为 我们的组件是继承自 React.component ，内置了除 render外的 生命周期函数</p>
+<h4 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h4><p>ReactDOM.render(<app>,document.getElementById(‘root’))</app></p>
+<p>↑ App之所以是html标签形式 ，就是因为jsx的语法，而这种语法就是 需要React 模块来编译，所以必须引入React<br>vue 的 api更丰富 实现更简单 但灵活性相对较差</p>
+<p>项目的入口文件时 index.js</p>
+<p>页面展示的内容是 App.js文件 里 render出来的html</p>
+<p>App就是 一个组件 大写字母开头都是组件</p>
+<p>引入的react 为 引入react的语法，使其知道大写字母开头的都是组件</p>
+<p>reactdom库的意义 是把 内容挂载到 dom节点上</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="comment">//↑ 等价于 ↓</span></span><br><span class="line"><span class="comment">// import React from 'react';</span></span><br><span class="line"><span class="comment">// const Component = React.Component</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;   </span><br><span class="line">  <span class="comment">// 或 import React from 'react';</span></span><br><span class="line">  <span class="comment">// class App extends React.Component 一个 类 继承了 react.component 组件这个类之后就是 一个组件了</span></span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">//直接render标签的语法 叫 JSX</span></span><br><span class="line">    	&lt;div&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
+<h4 id="生命周期函数-1"><a href="#生命周期函数-1" class="headerlink" title="生命周期函数"></a>生命周期函数</h4><p>生命周期函数指在某一个时刻组件会自动调用执行的函数</p>
+<p>每个组件 不管是父组件还是子组件 都有这些生命周期函数</p>
+<p>render函数就是一个生命周期函数。（constructor其实也是，但它是ES6自带的，不算react的生命周期函数</p>
+<p><img src="/2018/11/05/React-Learning-Note/react生命周期.png" alt=""></p>
+<p>这个生命周期函数的组合在Fiber（<a href="https://zhuanlan.zhihu.com/p/26027085" target="_blank" rel="noopener">React Fiber是什么</a>）之后就显得不合适了，因为，<strong>如果要开启async rendering，在render函数之前的所有函数，都有可能被执行多次。</strong> </p>
+<p>v16.3新增了两个生命周期函数</p>
+<p><img src="/2018/11/05/React-Learning-Note/新版react生命周期.jpg" alt="新版react生命周期"></p>
+<ul>
+<li><p>初始化  在 constructor 进行 定义了state</p>
+</li>
+<li><p>mounting  </p>
+<ul>
+<li><code>v17.0将被删除</code> componentWillMount 在组件即将被挂载到页面的时刻自动执行（第一次挂载的时候      用例 ： 解决首页渲染白屏 </li>
+<li>render  挂载</li>
+<li>componentDidMount  组件被挂载到页面之后被自动执行（第一次挂载的时候  </li>
+</ul>
+</li>
+<li><p>updation</p>
+<ul>
+<li>shouldComponentUpdate  组件被更新前，会自动执行  （要return true   组件需要被更新吗？可以使组件不做无谓的render</li>
+<li><code>v17.0将被删除</code>  componentWillUpdate 组件被更新之前，shouldComponentUpdata之后 根据其返回结果 执行</li>
+<li>render</li>
+<li>componentDidUpdate 组件更新完之后 执行</li>
+<li><code>v17.0将被删除</code> componentWillReceiveProps    一个组件要从父组件接收参数，（只要父组件的render函数被重新执行了，子组件的这个生命周期函数就会被执行）  如果这个组件第一次存在于父组件中，不会执行。如果这个组件之前已经存在于父组件中，才会执行</li>
+</ul>
+</li>
+<li><p>unmounting </p>
+<ul>
+<li>componentWillUnmount   当这个组件即将被从页面中剔除的时候，执行   （例：todoitem 条目被删除的时候  render -》 componentWillUnmount -》 componentDidUpdate</li>
+</ul>
+</li>
+<li><p>getDerivedStateFromProps </p>
+<p>无论是Mounting还是Updating，也无论是因为什么引起的Updating，全部都会被调用。 所以生命周期图 那里  getDerivedStateFromProps 要延长</p>
+</li>
+</ul>
+<p>  通常来讲，在 <code>componentWillReceiveProps</code> 中，我们一般会做以下两件事，一是根据 props 来更新 state，二是触发一些回调，如动画或页面跳转等。在老版本的 React 中，这两件事我们都需要在 <code>componentWillReceiveProps</code> 中去做。而在新版本中，官方将更新 state 与触发回调重新分配到了 <code>getDerivedStateFromProps</code> 与 <code>componentDidUpdate</code> 中，使得组件整体的更新逻辑更为清晰。而且在 <code>getDerivedStateFromProps</code> 中还禁止了组件去访问 this.props，强制让开发者去比较 nextProps 与 prevState 中的值，以确保当开发者用到 <code>getDerivedStateFromProps</code> 这个生命周期函数时，就是在根据当前的 props 来更新组件的 state，而不是去做其他一些让组件自身状态变得更加不可预测的事情。 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// before</span></span><br><span class="line">componentWillReceiveProps(nextProps) &#123;  </span><br><span class="line">  <span class="keyword">if</span> (nextProps.translateX !== <span class="keyword">this</span>.props.translateX) &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123; </span><br><span class="line">      translateX: nextProps.translateX, </span><br><span class="line">    &#125;); </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// after</span></span><br><span class="line"><span class="keyword">static</span> getDerivedStateFromProps(nextProps, prevState) &#123;</span><br><span class="line">  <span class="keyword">if</span> (nextProps.translateX !== prevState.translateX) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      translateX: nextProps.translateX,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>getSnapshotBeforeUpdate(prevProps, prevState)</p>
+<p>与 <code>componentWillUpdate</code> 不同，<code>getSnapshotBeforeUpdate</code> 会在最终的 render 之前被调用，也就是说在 <code>getSnapshotBeforeUpdate</code> 中读取到的 DOM 元素状态是可以保证与 <code>componentDidUpdate</code> 中一致的。虽然 <code>getSnapshotBeforeUpdate</code> 不是一个静态方法，但我们也应该尽量使用它去返回一个值。这个值会随后被传入到 <code>componentDidUpdate</code> 中，然后我们就可以在 <code>componentDidUpdate</code> 中去更新组件的状态，而不是在 <code>getSnapshotBeforeUpdate</code> 中直接更新组件状态。 </p>
+</li>
+<li><p>componentDidCatch(error, info)   错误处理函数 像 try…catch</p>
+</li>
+</ul>
+<p>setState包含副作用</p>
+<p>在 React 正式开启异步渲染模式之后，许多常用组件的性能将很有可能迎来一次整体的提升。进一步来说，配合异步渲染，许多现在的复杂组件都可以被处理得更加优雅，在代码层面得到更精细粒度上的控制，并最终为用户带来更加直观的使用体验。 </p>
+<p>注意，这些生命周期函数 除了 render之外 其他都可以不在在组件中进行定义 。因为 我们的组件是继承自 React.component ，内置了除 render外的 生命周期函数</p>
+<h4 id="JSX-1"><a href="#JSX-1" class="headerlink" title="JSX"></a>JSX</h4><p>ReactDOM.render(<app>,document.getElementById(‘root’))</app></p>
+<p>↑ App之所以是html标签形式 ，就是因为jsx的语法，而这种语法就是 需要React 模块来编译，所以必须引入Reactvue 的 api更丰富 实现更简单 但灵活性相对较差</p>
+<p>项目的入口文件时 index.js</p>
+<p>页面展示的内容是 App.js文件 里 render出来的html</p>
+<p>App就是 一个组件 大写字母开头都是组件</p>
+<p>引入的react 为 引入react的语法，使其知道大写字母开头的都是组件</p>
+<p>reactdom库的意义 是把 内容挂载到 dom节点上</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="comment">//↑ 等价于 ↓</span></span><br><span class="line"><span class="comment">// import React from 'react';</span></span><br><span class="line"><span class="comment">// const Component = React.Component</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;   </span><br><span class="line">  <span class="comment">// 或 import React from 'react';</span></span><br><span class="line">  <span class="comment">// class App extends React.Component 一个 类 继承了 react.component 组件这个类之后就是 一个组件了</span></span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">//直接render标签的语法 叫 JSX</span></span><br><span class="line">    	&lt;div&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
+<h4 id="生命周期函数-2"><a href="#生命周期函数-2" class="headerlink" title="生命周期函数"></a>生命周期函数</h4><p>生命周期函数指在某一个时刻组件会自动调用执行的函数</p>
+<p>每个组件 不管是父组件还是子组件 都有这些生命周期函数</p>
+<p>render函数就是一个生命周期函数。（constructor其实也是，但它是ES6自带的，不算react的生命周期函数</p>
+<p><img src="/2018/11/05/React-Learning-Note/react生命周期.png" alt=""></p>
+<p>这个生命周期函数的组合在Fiber（<a href="https://zhuanlan.zhihu.com/p/26027085" target="_blank" rel="noopener">React Fiber是什么</a>）之后就显得不合适了，因为，<strong>如果要开启async rendering，在render函数之前的所有函数，都有可能被执行多次。</strong> </p>
+<p>v16.3新增了两个生命周期函数</p>
+<p><img src="/2018/11/05/React-Learning-Note/新版react生命周期.jpg" alt="新版react生命周期"></p>
+<ul>
+<li><p>初始化  在 constructor 进行 定义了state</p>
+</li>
+<li><p>mounting  </p>
+<ul>
+<li><code>v17.0将被删除</code> componentWillMount 在组件即将被挂载到页面的时刻自动执行（第一次挂载的时候      用例 ： 解决首页渲染白屏 </li>
+<li>render  挂载</li>
+<li>componentDidMount  组件被挂载到页面之后被自动执行（第一次挂载的时候  </li>
+</ul>
+</li>
+<li><p>updation</p>
+<ul>
+<li>shouldComponentUpdate  组件被更新前，会自动执行  （要return true   组件需要被更新吗？可以使组件不做无谓的render</li>
+<li><code>v17.0将被删除</code>  componentWillUpdate 组件被更新之前，shouldComponentUpdata之后 根据其返回结果 执行</li>
+<li>render</li>
+<li>componentDidUpdate 组件更新完之后 执行</li>
+<li><code>v17.0将被删除</code> componentWillReceiveProps    一个组件要从父组件接收参数，（只要父组件的render函数被重新执行了，子组件的这个生命周期函数就会被执行）  如果这个组件第一次存在于父组件中，不会执行。如果这个组件之前已经存在于父组件中，才会执行</li>
+</ul>
+</li>
+<li><p>unmounting </p>
+<ul>
+<li>componentWillUnmount   当这个组件即将被从页面中剔除的时候，执行   （例：todoitem 条目被删除的时候  render -》 componentWillUnmount -》 componentDidUpdate</li>
+</ul>
+</li>
+<li><p>getDerivedStateFromProps </p>
+<p>无论是Mounting还是Updating，也无论是因为什么引起的Updating，全部都会被调用。 所以生命周期图 那里  getDerivedStateFromProps 要延长</p>
+</li>
+</ul>
+<p>  通常来讲，在 <code>componentWillReceiveProps</code> 中，我们一般会做以下两件事，一是根据 props 来更新 state，二是触发一些回调，如动画或页面跳转等。在老版本的 React 中，这两件事我们都需要在 <code>componentWillReceiveProps</code> 中去做。而在新版本中，官方将更新 state 与触发回调重新分配到了 <code>getDerivedStateFromProps</code> 与 <code>componentDidUpdate</code> 中，使得组件整体的更新逻辑更为清晰。而且在 <code>getDerivedStateFromProps</code> 中还禁止了组件去访问 this.props，强制让开发者去比较 nextProps 与 prevState 中的值，以确保当开发者用到 <code>getDerivedStateFromProps</code> 这个生命周期函数时，就是在根据当前的 props 来更新组件的 state，而不是去做其他一些让组件自身状态变得更加不可预测的事情。 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// before</span></span><br><span class="line">componentWillReceiveProps(nextProps) &#123;  </span><br><span class="line">  <span class="keyword">if</span> (nextProps.translateX !== <span class="keyword">this</span>.props.translateX) &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123; </span><br><span class="line">      translateX: nextProps.translateX, </span><br><span class="line">    &#125;); </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// after</span></span><br><span class="line"><span class="keyword">static</span> getDerivedStateFromProps(nextProps, prevState) &#123;</span><br><span class="line">  <span class="keyword">if</span> (nextProps.translateX !== prevState.translateX) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      translateX: nextProps.translateX,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>getSnapshotBeforeUpdate(prevProps, prevState)</p>
+<p>与 <code>componentWillUpdate</code> 不同，<code>getSnapshotBeforeUpdate</code> 会在最终的 render 之前被调用，也就是说在 <code>getSnapshotBeforeUpdate</code> 中读取到的 DOM 元素状态是可以保证与 <code>componentDidUpdate</code> 中一致的。虽然 <code>getSnapshotBeforeUpdate</code> 不是一个静态方法，但我们也应该尽量使用它去返回一个值。这个值会随后被传入到 <code>componentDidUpdate</code> 中，然后我们就可以在 <code>componentDidUpdate</code> 中去更新组件的状态，而不是在 <code>getSnapshotBeforeUpdate</code> 中直接更新组件状态。 </p>
+</li>
+<li><p>componentDidCatch(error, info)   错误处理函数 像 try…catch</p>
+</li>
+</ul>
+<p>setState包含副作用</p>
+<p>在 React 正式开启异步渲染模式之后，许多常用组件的性能将很有可能迎来一次整体的提升。进一步来说，配合异步渲染，许多现在的复杂组件都可以被处理得更加优雅，在代码层面得到更精细粒度上的控制，并最终为用户带来更加直观的使用体验。 </p>
+<p>注意，这些生命周期函数 除了 render之外 其他都可以不在在组件中进行定义 。因为 我们的组件是继承自 React.component ，内置了除 render外的 生命周期函数</p>
+<h4 id="JSX-2"><a href="#JSX-2" class="headerlink" title="JSX"></a>JSX</h4><p>ReactDOM.render(<app>,document.getElementById(‘root’))</app></p>
+<p>↑ App之所以是html标签形式 ，就是因为jsx的语法，而这种语法就是 需要React 模块来编译，所以必须引入React</p>
+<p><strong>内容过多，继续阅读请</strong><a href="https://github.com/TinyD0409/tinyd0409.github.io/blob/master/miao/react/React.md" target="_blank" rel="noopener">点这里</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/26/Vue-Learn-Note/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TinyD">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/oscar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TinyD">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/Vue-Learn-Note/" itemprop="url">Vue 学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T22:14:58+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Note/" itemprop="url" rel="index">
+                    <span itemprop="name">Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>重要的东西总是会迟来一步，但总是会到的   致Vue</p>
+<p>在vue里 computed属性是用getter和setter</p>
+<h4 id="Vue生命周期-（底层实现原理）"><a href="#Vue生命周期-（底层实现原理）" class="headerlink" title="Vue生命周期  （底层实现原理）"></a>Vue生命周期  （底层实现原理）</h4><p><img src="/2018/10/26/Vue-Learn-Note/lifecyclevue.png" alt=""></p>
+<h4 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h4><p>  现代框架的一个原理  virtual dom<br>  算出 virtual dom ，对比两个的差异，再进行绘制<br>  所以数据发生一点变化 就会重新算一遍数据结构，得到新的dom结构<br>  效率O(n) 只会同级比较 ，虽然不是最优，但效率更高</p>
+<p>  而jQuery则是，知道变化的dom在哪里，直接操作，没有计算diff的过程，性能更好。但是代码可维护性差，都是因为人肉知道diff 而修改。<br>  之所以现代新流行的框架会 用这种数据更改 ，对比dom差异，重新绘制的方式，因为 是以数据为核心</p>
+<p>  两行连着修改，也只会调用一次nexttick </p>
+<p>  性能优化<br>  key用于计算diff的时候更快<br>  解决 li v-for 情况 如果UNshift的话 一样的数据就不会改了，不然会全改<br>  push的话可以不用key，因为是顺序对比 </p>
+<h4 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h4><p>MVVM 设计模式  model（是数据层 new Vue） viewmodel（这层vue已经实现了的，我们不用关心。有关虚拟dom object.definedproperty） view（HTML 模板标签） </p>
+<p>面向数据编程</p>
+<p>根据数据的变化 view层变化 ，这个事情是vm层做的</p>
+<p>MVP模式 model（模型层，发送AJAX请求） view（视图层dom结构） present（控制器）  原生、jQuery就是这种设计模式   核心在p层 p发生一个事件 要么修改了视图层，要么向模型层发送AJAX请求</p>
+<p>面向dom编程 </p>
+<p>  组件中的数据是通过上下文传递的</p>
+<p>  组件化开发</p>
+<p>  需要 style 只在组件内部有 效果 （曾经有 <code>&lt;style scoped&gt;</code>）</p>
+<p>  单文件组件 <strong>.vue</strong>文件</p>
+<p>  在 非根组件  像在组件中 data属性 必须是函数 （返回新的数据）</p>
+<p>  因为子组件是要复用的，根组件只用一次。为防止子组件间数据互相影响，返回的是函数</p>
+<p>  组件也可以套组件，组件内部的组件只能被组件自己的使用，并且只在模板里<br>  建议现在只使用全局注册组件</p>
+<p>  组件模板只能包含一个根元素 （if else 解析出只有一个 可以 ）<br>  如果有两个只认第一个</p>
+<p>  播放器实时变化 要用watch<br>  onchange事件 改只是 松手之后才改</p>
+<p>  组件在组件自己内部的data里求值</p>
+<p>  而根元素new Vue这个元素 是在new Vue这里的data里求值 </p>
+<p>可以局部注册，↓ 只可以在这个域用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  components:&#123;</span><br><span class="line">    xxxx:&#123;</span><br><span class="line">      template:</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">Vue.component(<span class="string">'foo'</span>,&#123;</span><br><span class="line">​   template:<span class="string">`&lt;hello&gt;&lt;/hello&gt;`</span>,</span><br><span class="line">​	  data()&#123;</span><br><span class="line">​	    xxxxx</span><br><span class="line">​	  &#125;,</span><br><span class="line">  ​	components:&#123;   <span class="comment">//这个组件并不能使用 foo组件的data ，作用域只在自己这里</span></span><br><span class="line">  ​		hello:&#123;<span class="attr">template</span>:<span class="string">``</span>,data()&#123;<span class="keyword">return</span> xxx&#125;&#125;</span><br><span class="line">  ​	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>vue的组件只能在vue对象(域)中使用</p>
+<p>组件中data通常都是函数，因为每次变化都要返回新的对象 </p>
+<p>Vue中component有一些缺点</p>
+<ul>
+<li>全局定义</li>
+<li>字符串模板 缺乏语法高亮 不利于开发</li>
+<li>不支持CSS</li>
+<li>没有构建步骤 不能使用 预处理器 如pug jade babel</li>
+</ul>
+<p>给出的解决方案是Vue的模块化开发<br>.vue 文件</p>
+<h4 id="Vue模块化开发"><a href="#Vue模块化开发" class="headerlink" title="Vue模块化开发"></a>Vue模块化开发</h4><p>Vue CLI</p>
+<p>Vue CLI是一个基于Vue.js进行快速开发的完整系统，提供</p>
+<ul>
+<li>搭建交互式的项目脚手架</li>
+<li>零配置原型开发</li>
+<li>一个运行时的依赖<ul>
+<li>可升级</li>
+<li>基于webpack构建 带有合理的默认配置</li>
+<li>可以通过项目内的配置文件进行配置</li>
+<li>通过插件进行扩展</li>
+</ul>
+</li>
+<li>丰富的官方插件集合 集成前端生态中最好的工具</li>
+<li>一套完全图形化的创建和管理Vue.js项目的用户界面</li>
+</ul>
+<h5 id="有关组件化开发的意义"><a href="#有关组件化开发的意义" class="headerlink" title="有关组件化开发的意义"></a>有关组件化开发的意义</h5><p>一个重要的事情值得注意，<strong>关注点分离不等于文件类型分离。</strong></p>
+<p>在现代 UI 开发中，我们已经发现相比于把代码库分离成三个大的层次并将其相互交织起来，</p>
+<p>把它们划分为松散耦合的组件再将其组合起来更合理一些。</p>
+<p>在一个组件里，其模板、逻辑和样式是<strong>内部耦合</strong>的，并且把他们搭配在一起实际上使得组件更加内聚且更可维护。 </p>
+<h4 id="Vue中数据的传递"><a href="#Vue中数据的传递" class="headerlink" title="Vue中数据的传递"></a>Vue中数据的传递</h4><p>父组件通过props属性方式向子组件传值，子组件通过实践触发的方式向父组件传值</p>
+<h5 id="父-gt-子通信"><a href="#父-gt-子通信" class="headerlink" title="父 =&gt; 子通信"></a>父 =&gt; 子通信</h5><p>vue中父组件向子组件传递信息时通过属性的形式</p>
+<p>component上props字段 上 是html中vue域中对应标签中   要传给组件的变量名</p>
+<p>props :[‘username’,’value’,’num’]</p>
+<p>VUE中单向通信 / 单向数据流</p>
+<p>子组件不能修改父组件传来的数据 所以要将父组件传来的数据存在data属性里，函数中返回，作为一个副本</p>
+<p>但父组件可以修改信息，过会再传给子组件</p>
+<h5 id="子-gt-父通信"><a href="#子-gt-父通信" class="headerlink" title="子 =&gt; 父通信"></a>子 =&gt; 父通信</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div id=<span class="string">"emit-example-simple"</span>&gt;   &lt;!-vue的域-&gt;</span><br><span class="line">    &lt;video on="foo" @volumechange @pending @paused @rsumed @loading @playable&gt;&lt;/video&gt;</span><br><span class="line">    &lt;input @click="xx" @change="yy" @keyup="zz"&gt; </span><br><span class="line">    </span><br><span class="line">  &lt;welcome-button v-on:welcome="sayHi"&gt;&lt;/welcome-button&gt;  </span><br><span class="line">&lt;!-- 域里的组件 在域里所以能直接访问methods上的方法</span><br><span class="line">	vue实现了html标签的扩展 </span><br><span class="line">    同时将域里的方法 给组件里的 welcome自定义事件 这个事件可以是很多方法组成的。</span><br><span class="line">    </span><br><span class="line">    所以组件的事件触发的时候 触发的就是域里的 方法了 </span><br><span class="line">    实现子父通信--&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">//vm.$emit( event, arg ) //触发当前实例上的事件  类似jQuery上的trigger</span><br><span class="line">//arg 是传递给 event的参数 event可以使用</span><br><span class="line">//vm.$on( event, fn );//监听event事件后运行 fn； </span><br><span class="line">        </span><br><span class="line">Vue.component('welcome-button', &#123;</span><br><span class="line">  template: `</span><br><span class="line">    &lt;button v-on:click="$emit('welcome')"&gt;</span><br><span class="line">      Click me to be welcomed</span><br><span class="line">    &lt;/button&gt;</span><br><span class="line">   `</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: '#emit-example-simple',</span><br><span class="line">  methods: &#123;</span><br><span class="line">    sayHi: function () &#123;</span><br><span class="line">      alert('Hi!')</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//还有另一种情况 给组件绑定的是原生的事件</span><br><span class="line">//可以不用套两层 来传递点数据</span><br><span class="line">&lt;template @click.native="handleClick"&gt;&lt;/template&gt;</span><br><span class="line">Vue.component('template',&#123;</span><br><span class="line">    template:"&lt;div&gt;child&lt;/div&gt;",</span><br><span class="line">&#125;)</span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">    el:'#root',</span><br><span class="line">    methods:&#123;</span><br><span class="line">        handleClick:function()&#123;</span><br><span class="line">            alert('click')</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>里面emit 触发一个事件</p>
+<p>里面on监听一个事件 ，产生一些效果</p>
+<p>如一个div 经常触发click事件，但是没人监听它（on） </p>
+<h4 id="非父子组件间通信"><a href="#非父子组件间通信" class="headerlink" title="非父子组件间通信"></a>非父子组件间通信</h4><h5 id="VUEX"><a href="#VUEX" class="headerlink" title="VUEX"></a>VUEX</h5><h5 id="总线机制（bus、发布订阅模式、观察者模式"><a href="#总线机制（bus、发布订阅模式、观察者模式" class="headerlink" title="总线机制（bus、发布订阅模式、观察者模式"></a>总线机制（bus、发布订阅模式、观察者模式</h5><p>利用一个第三方 varEvent= new Vue()</p>
+<p>两者一个 将数据 通过 emit 传递给Event</p>
+<p>另一个利用mounted 初始化 $on 监听 Event上面这个 前者绑在上面的事件</p>
+<p>Event类似调度器</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Event = <span class="keyword">new</span> Vue()</span><br><span class="line"><span class="comment">//Vue.prototype.bus = new Vue()   所有的Vue实例都能访问到bus属性</span></span><br><span class="line"></span><br><span class="line">Vue.component(<span class="string">'huahua'</span>,&#123;</span><br><span class="line">  template:<span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">      我说：&lt;input @keyup="on_change" v-model="i_said"&gt;&#123;&#123;i_said&#125;&#125;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  `</span>,</span><br><span class="line">  methods:&#123;</span><br><span class="line">    on_change:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      Event.$emit(<span class="string">'huahua-said-something'</span>,<span class="keyword">this</span>.i_said)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      i_said:<span class="string">''</span> </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">Vue.component(<span class="string">'shuandan'</span>,&#123;</span><br><span class="line">  template:<span class="string">`&lt;div&gt;花花说：&#123;&#123;huahua_said&#125;&#125;&lt;/div&gt;`</span>,</span><br><span class="line">  data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      huahua_said:<span class="string">''</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">//钩子 节点</span></span><br><span class="line">      me = <span class="keyword">this</span></span><br><span class="line">    Event.$on(<span class="string">'huahua-said-something'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">      me.huahua_said = data;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="插槽-（组件的子元素按照特定的形式分法到中的特定的slot的位置"><a href="#插槽-（组件的子元素按照特定的形式分法到中的特定的slot的位置" class="headerlink" title="插槽 （组件的子元素按照特定的形式分法到中的特定的slot的位置"></a>插槽 （组件的子元素按照特定的形式分法到中的特定的slot的位置</h4><p>如果 <code>&lt;child&gt;</code> <strong>没有</strong>包含一个 <code>&lt;slot&gt;</code> 元素，则任何传入它的内容都会被抛弃。 </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"root"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">child</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span>&gt;</span>Dell<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">'header'</span>&gt;</span></span><br><span class="line">            header</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">'footer'</span>&gt;</span></span><br><span class="line">            footer</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">child</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">	Vue.component(<span class="string">'child'</span>,&#123;</span></span><br><span class="line"><span class="xml">        template:`<span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="javascript">        			&lt;slot&gt;<span class="xml"><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span>  <span class="comment">// slot类似一个占位符 想block一样hug模板引擎 里面如果写上内容，则会在没有数据的时候 显示这个默认内容，而一个插槽表示组件中所有的元素，所以如果写两个插槽的话 ，会将元素重复两遍</span></span></span><br><span class="line"><span class="xml">        		 <span class="tag">&lt;/<span class="name">div</span>&gt;</span>`,</span></span><br><span class="line"><span class="undefined">        </span></span><br><span class="line"><span class="javascript">        <span class="comment">//这种形式叫具名插槽 名字和 html中 slot属性值是对应的</span></span></span><br><span class="line"><span class="xml">        template:`<span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">					<span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">'header'</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line"><span class="xml">					<span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">'footer'</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>`</span></span><br><span class="line"><span class="undefined">	&#125;)</span></span><br><span class="line"><span class="javascript">	<span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el:<span class="string">'#root'</span></span></span><br><span class="line"><span class="undefined">	&#125;)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>//作用域插槽</p>
+<p><a href="https://juejin.im/post/5a69ece0f265da3e5a5777ed]" target="_blank" rel="noopener">掘金上一个通俗讲解</a></p>
+<p>UI渲染中的forEach<br>当做循环 或某一部分的dom结构 由外界传进来的时候<br>就是插槽上带数据，而父组件的模板要用这个数据。样式由父组件决定<br>普通插槽和具名插槽都是父组件自己提供的内容；而作用域插槽，父组件只需要提供一套样式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">child</span>&gt;</span>  // 这个组件调用插槽 template 传递过来数据 才显示</span><br><span class="line">    //父组件用子组件的时候传过来的是一个插槽 ↓ 必须是template标签</span><br><span class="line">   <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot-scope</span>=<span class="string">"hello"</span>&gt;</span>  //slot-scope 代表 插槽上的数据   用slot时候需要有个东西接住它,hello是一个变量名   </span><br><span class="line">     //接收到的数据（hello）是被怎样的ui展示出来 </span><br><span class="line">     //hello.world 就像是 forEach中 表示迭代过来的每一项 的 item </span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;hello.world&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span>  //接收到hello 要如何展示 ，以li的形式展示</span><br><span class="line">     //<span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item of hello.world"</span>&gt;</span> &#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span> 也可以在这里迭代 </span><br><span class="line">   <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">Vue.component(<span class="string">'child'</span>,&#123;</span></span><br><span class="line"><span class="javascript">  data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="undefined">      list:[1,2,3,4]</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;,</span></span><br><span class="line"><span class="xml">  template:`<span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">              <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="undefined">                &lt;slot</span></span><br><span class="line"><span class="javascript">                  v-<span class="keyword">for</span>=<span class="string">"item of list"</span></span></span><br><span class="line"><span class="javascript">                  v-bind:world=item&gt;<span class="xml"><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span>  <span class="comment">//将每一项的item绑在world上，传出去</span></span></span><br><span class="line"><span class="xml">              <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span>`</span></span><br><span class="line"><span class="undefined">&#125;)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="动态组件"><a href="#动态组件" class="headerlink" title="动态组件"></a>动态组件</h4><p><keep-alive>（内置组件</keep-alive></p>
+<p><component :is="type"></component>（内置组件  // 监听type的值得变化   a、b两者切换显示时候可以用</p>
+<p><strong>v-once</strong>指令  可以有效提高性能 </p>
+<p>只渲染元素和组件<strong>一次</strong>。随后的重新渲染，元素/组件及其所有的子节点将被视为静态内容并跳过。这可以用于优化更新性能。 </p>
+<p>运行一次 缓存起来 不然做切换的时候 ，会销毁一个组件在创建一个组件</p>
+<h4 id="特殊特性"><a href="#特殊特性" class="headerlink" title="特殊特性"></a>特殊特性</h4><ul>
+<li>#####is   </li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 当 `currentView` 改变时，组件也跟着改变 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">v-bind:is</span>=<span class="string">"currentView"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 这样做是有必要的，因为 `&lt;my-row&gt;` 放在一个 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- `&lt;table&gt;` 内可能无效且被放置到外面 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--ul 标签也可能出这种错误--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span> <span class="attr">is</span>=<span class="string">"my-row"</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="ref-通过ref获取dom节点"><a href="#ref-通过ref获取dom节点" class="headerlink" title="ref   通过ref获取dom节点"></a>ref   通过ref获取dom节点</h5><p><code>ref</code> 被用来给元素或子组件注册引用信息。引用信息将会注册在父组件的 <code>$refs</code>对象上。如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素；如果用在子组件上，引用就指向组件实例 </p>
+<p>类似 正常世界里的  id 属性</p>
+<p>如果同样ref的元素不止一个 那取出来的是一个数组</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'root'</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">ref</span>=<span class="string">'hello'</span> @<span class="attr">click</span>=<span class="string">"xxx"</span>&gt;</span>hello world <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"> 	<span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el:<span class="string">'#root'</span>,</span></span><br><span class="line"><span class="undefined">        methods:&#123;</span></span><br><span class="line"><span class="javascript">            handleClick:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="keyword">this</span>.$refs.hello)  <span class="comment">//打印出的 &lt;div&gt;hello world&lt;/div&gt;</span></span></span><br><span class="line"><span class="javascript">                <span class="comment">//如果 这个div 是一个长得非常规的自定义标签</span></span></span><br><span class="line"><span class="javascript">                <span class="comment">//或者可以获取这个数据 算出需要的和/积……</span></span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"> 	&#125;)</span></span><br><span class="line"><span class="undefined"> </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>babeljs 编译器</strong><br>创建出虚拟dom结构<br>字符串模板也是都先 转成 这种createElement render出去<br>速度会更快 。所以上线项目是看不到大片的字符串模板的</p>
+</li>
+</ul>
+<p>通过createElement创建出来的dom 也是要绑定属性和事件的</p>
+<h4 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h4><p>路由就是根据网址的不同，返回不同的内容给用户</p>
+<p>前端路由</p>
+<p>用Vue写的是单页应用。页面进行跳转的时候，不会发生html的请求</p>
+<p>通过JS感知到页面的变化，在将当前页面清除，将下一个页面挂在上来</p>
+<p>缺点是    首屏展示慢   SEO差 </p>
+<p>优点是一旦加载好，之后页面的跳转，更快，页面模板部分不会变，数据通过AJAX获取，会给人没有刷新的感觉</p>
+<p><strong>嵌套路由</strong>  一个路由中嵌套另一个路由</p>
+<p>单文件入口，将网址分享给其他人的时候，不管是哪个页面，请求的都应该是入口文件。</p>
+<p>URL分享给其它人（直接在某个地址刷新浏览器）， 服务器返回正确的入口页面 应用本身部署在哪个地址下，让前端配置base地址，即让前端路由工具区分哪部分是后端路由，哪部分是前端路由。 </p>
+<p>相对路径，页面里的资源最好不使用相对路径，最好直接相对于网站根目录  </p>
+<p>router-link 相当于a标签 如果不想让他做a标签 就在里面加 tag=”xx”</p>
+<p>keep-alive的元素会有 一个 activated 生命周期函数 同时解绑的还有一个 deactivated 函数</p>
+<p>另一对是mounted 和unmounted</p>
+<h5 id="递归组件"><a href="#递归组件" class="headerlink" title="递归组件"></a>递归组件</h5><p>组件 自己调用自己</p>
+<p>组件的名字的作用很大程度就是可以用来作为递归组件</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/oscar.png" alt="TinyD">
+            
+              <p class="site-author-name" itemprop="name">TinyD</p>
+              <p class="site-description motion-element" itemprop="description">stay hungry stay foolish</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/TinyD0409" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:ningkid345@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TinyD</span>
+
+  
+</div>
+
+
+ <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+ -->
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+  
+</body>
+</html>

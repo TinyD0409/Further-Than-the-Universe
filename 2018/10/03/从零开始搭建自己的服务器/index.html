@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-circle.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="杂谈,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="首先 买一个服务器 如搬瓦工上。获得ip 123.456.67.890 端口号 25000  先关闭服务器，为其下载ubuntu系统 登录到你的服务器上 $ssh root@123.456.67.890 -p 25000">
+<meta name="keywords" content="杂谈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始搭建自己的服务器">
+<meta property="og:url" content="http://yoursite.com/2018/10/03/从零开始搭建自己的服务器/index.html">
+<meta property="og:site_name" content="TinyD">
+<meta property="og:description" content="首先 买一个服务器 如搬瓦工上。获得ip 123.456.67.890 端口号 25000  先关闭服务器，为其下载ubuntu系统 登录到你的服务器上 $ssh root@123.456.67.890 -p 25000">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-17T07:03:02.481Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从零开始搭建自己的服务器">
+<meta name="twitter:description" content="首先 买一个服务器 如搬瓦工上。获得ip 123.456.67.890 端口号 25000  先关闭服务器，为其下载ubuntu系统 登录到你的服务器上 $ssh root@123.456.67.890 -p 25000">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/10/03/从零开始搭建自己的服务器/">
+
+
+
+
+
+  <title>从零开始搭建自己的服务器 | TinyD</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband">
+      <a href="https://github.com/TinyD0409"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/forkme_right_red.png" alt="Fork me on GitHub"></a>
+    </div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">TinyD</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+    <a href="https://github.com/TinyD0409" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub">
+      <svg width="80" height="80" viewbox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+    <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+      </svg>
+</a>
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/03/从零开始搭建自己的服务器/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TinyD">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/oscar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TinyD">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">从零开始搭建自己的服务器</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-03T23:08:17+08:00">
+                2018-10-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Note/" itemprop="url" rel="index">
+                    <span itemprop="name">Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ol>
+<li>首先 买一个服务器 如搬瓦工上。获得ip 123.456.67.890 端口号 25000</li>
+</ol>
+<p>先关闭服务器，为其下载ubuntu系统</p>
+<p>登录到你的服务器上 <code>$ssh root@123.456.67.890 -p 25000</code><br><a id="more"></a><br>会提示你输入初始密码 </p>
+<p>进入第一件事修改密码 pwd</p>
+<p>创建公私钥，以便不输入密码直接登录</p>
+<p><code>$ssh keygen.exe</code>(git自带的命令)</p>
+<p><code>$mdir .ssh</code></p>
+<p><code>$ssh-copy-id root@123.456.67.890 -p 25000</code></p>
+<p>在本地储存公私钥的文件夹创建/有就不用创建了  config </p>
+<p>host 123.456.67.890 Port 25000 这样登录时候就不用写<code>-p25000</code>了</p>
+<p>修改之前申请的域名的DNS，将其指向这个ip</p>
+<p>在Linux里下载是叫apt</p>
+<p>apt install nodejs（node最新版本的下载参照官网</p>
+<p>apt install curl/wget （下载工具</p>
+<p>apt install -zsh （主题修改 显示的信息会多一点,更多配置 可以搜索oh my zsh </p>
+<p>ZSH_THEME = ‘ys’</p>
+<p><code>$scp (-r递归式上传，上传文件夹时用)-p 25000 ./xxx.txt root@123.456.67.890 :/root</code> 上传文件到root文件夹</p>
+<p>sftp://</p>
+<p>FileZila与远程系统共享 文件 </p>
+<p>winSCP 在本地映射成一个本地磁盘 这两种方法都可以直接将文件上传到远程服务器</p>
+<p>mcedit 一个在Linux运行的图形化编辑器</p>
+<h5 id="如何让服务器24小时后台开启"><a href="#如何让服务器24小时后台开启" class="headerlink" title="如何让服务器24小时后台开启"></a>如何让服务器24小时后台开启</h5><p>1 tmux 可以同时运行几个服务器，可以实现远程结队编程</p>
+<p>apt install tmux</p>
+<p>tmux中组合命令键为 Ctrl+B</p>
+<p>Ctrl+B+ %水平拆分成2个</p>
+<p>tmux Ctrl+B+D 退出并保持tmux窗口</p>
+<p>tmux a 重新挂载（显示出运行着的tmux窗口）</p>
+<p>2 pm2 优势在于会自动重启</p>
+<p>pm2 start hs.js 打开并运行hs</p>
+<p>pm2 monit 显示全部进程的日志</p>
+<p>pm2 log 0 显示id为0的进程日志</p>
+<p>pm2 l 显示之前的列表</p>
+<p>pm2 restart 0 重启id为0的进程</p>
+<p>pm2 stop 0 停止id为0的进程</p>
+<h5 id="如何使自己的域名以https方式打开"><a href="#如何使自己的域名以https方式打开" class="headerlink" title="如何使自己的域名以https方式打开"></a>如何使自己的域名以https方式打开</h5><p>下载<code>$curl https://get.acme.sh | sh</code></p>
+<p>安装<code>$ apt install socat</code></p>
+<p>获得证书<code>$acme.sh --issue -d 49.tinyd.ooo --standalone</code></p>
+<p>记住键值对存储的路径。http-server.js时 require的是https模块</p>
+<p>http请求的默认端口80</p>
+<p>https请求的默认端口443</p>
+<p>https模块需要有key和cert的参数</p>
+<p>可以使用 hsts 让页面自动跳转到https</p>
+<p>也可以使用 location.protocal = ‘https:’</p>
+<p> Your cert is in             /root/.acme.sh/49.tinyd.ooo/49.tinyd.ooo.cer</p>
+<p>  Your cert key is in     /root/.acme.sh/49.tinyd.ooo/49.tinyd.ooo.key</p>
+<p>The intermediate CA cert is in               /root/.acme.sh/49.tinyd.ooo/ca.cer</p>
+<p> And the full chain certs is there:          /root/.acme.sh/49.tinyd.ooo/fullchain.cer</p>
+<h5 id="——-express-js的初步使用"><a href="#——-express-js的初步使用" class="headerlink" title="—— express.js的初步使用"></a>—— express.js的初步使用</h5><p>express.js是最流行的node库</p>
+<p>安装 npm install express –save(记录下依赖文件”dependencies” )</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">npm install express-generator -g  <span class="comment">//安装express生成器</span></span><br><span class="line"> express --view=pug myapp   <span class="comment">//创建服务器</span></span><br><span class="line">   create : myapp\</span><br><span class="line">   create : myapp\public\ <span class="comment">//挂在网上展示的代码都在public文件夹</span></span><br><span class="line">   create : myapp\public\javascripts\</span><br><span class="line">   create : myapp\public\images\</span><br><span class="line">   create : myapp\public\stylesheets\</span><br><span class="line">   create : myapp\public\stylesheets\style.css</span><br><span class="line">   create : myapp\routes\</span><br><span class="line">   create : myapp\routes\index.js</span><br><span class="line">   create : myapp\routes\users.js</span><br><span class="line">   create : myapp\views\</span><br><span class="line">   create : myapp\views\error.pug  <span class="comment">//使用的是pug模板</span></span><br><span class="line">   create : myapp\views\index.pug</span><br><span class="line">   create : myapp\views\layout.pug</span><br><span class="line">   create : myapp\app.js </span><br><span class="line">   create : myapp\package.json</span><br><span class="line">   create : myapp\bin\</span><br><span class="line">   create : myapp\bin\www</span><br><span class="line">   </span><br><span class="line">   change directory:</span><br><span class="line">     $ cd myapp</span><br><span class="line"></span><br><span class="line">   install dependencies:</span><br><span class="line">     $ npm install  </span><br><span class="line"></span><br><span class="line">   run the app:</span><br><span class="line">     $ DEBUG=myapp:* npm start <span class="comment">//启动服务器</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/杂谈/" rel="tag"><i class="fa fa-tag"></i> 杂谈</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/03/Node-js-Learning-Note/" rel="next" title="Node.js 学习笔记">
+                <i class="fa fa-chevron-left"></i> Node.js 学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/26/Vue-Learn-Note/" rel="prev" title="Vue 学习笔记">
+                Vue 学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/oscar.png" alt="TinyD">
+            
+              <p class="site-author-name" itemprop="name">TinyD</p>
+              <p class="site-description motion-element" itemprop="description">stay hungry stay foolish</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/TinyD0409" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:ningkid345@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何让服务器24小时后台开启"><span class="nav-number">1.</span> <span class="nav-text">如何让服务器24小时后台开启</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何使自己的域名以https方式打开"><span class="nav-number">2.</span> <span class="nav-text">如何使自己的域名以https方式打开</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#——-express-js的初步使用"><span class="nav-number">3.</span> <span class="nav-text">—— express.js的初步使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TinyD</span>
+
+  
+</div>
+
+
+ <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+ -->
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+  
+</body>
+</html>
