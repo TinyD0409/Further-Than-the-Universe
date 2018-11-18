@@ -86,24 +86,20 @@
 
 
 
-<meta name="description" content="支持IE8以上 Facebook退出，2013年开源  React Fiber react16之后的叫法，底层算法的改良，更加流畅 面向数据驱动的编程。只要数据改变 页面自己就会变。不用再自己操纵dom了。 理念  all in js  。CSS文件也可以引入到街上js中 我们也只关注数据就可以了 实际开发中可以自底向上（便于测试） 也可以自顶向下（更容易） 声名式开发    react vue">
+<meta name="description" content="支持IE8以上 Facebook退出，2013年开源  React Fiber react16之后的叫法，底层算法的改良，更加流畅 面向数据驱动的编程。只要数据改变 页面自己就会变。不用再自己操纵dom了。 理念  all in js  。CSS文件也可以引入到街上js中">
 <meta name="keywords" content="react,JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React Learning Note">
 <meta property="og:url" content="http://yoursite.com/2018/11/05/React-Learning-Note/index.html">
 <meta property="og:site_name" content="TinyD">
-<meta property="og:description" content="支持IE8以上 Facebook退出，2013年开源  React Fiber react16之后的叫法，底层算法的改良，更加流畅 面向数据驱动的编程。只要数据改变 页面自己就会变。不用再自己操纵dom了。 理念  all in js  。CSS文件也可以引入到街上js中 我们也只关注数据就可以了 实际开发中可以自底向上（便于测试） 也可以自顶向下（更容易） 声名式开发    react vue">
+<meta property="og:description" content="支持IE8以上 Facebook退出，2013年开源  React Fiber react16之后的叫法，底层算法的改良，更加流畅 面向数据驱动的编程。只要数据改变 页面自己就会变。不用再自己操纵dom了。 理念  all in js  。CSS文件也可以引入到街上js中">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/11/05/React-Learning-Note/react生命周期.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/05/React-Learning-Note/新版react生命周期.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/11/05/React-Learning-Note/react生命周期.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/05/React-Learning-Note/新版react生命周期.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/11/05/React-Learning-Note/react生命周期.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/05/React-Learning-Note/新版react生命周期.jpg">
-<meta property="og:updated_time" content="2018-11-17T14:24:11.623Z">
+<meta property="og:updated_time" content="2018-11-18T05:41:02.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Learning Note">
-<meta name="twitter:description" content="支持IE8以上 Facebook退出，2013年开源  React Fiber react16之后的叫法，底层算法的改良，更加流畅 面向数据驱动的编程。只要数据改变 页面自己就会变。不用再自己操纵dom了。 理念  all in js  。CSS文件也可以引入到街上js中 我们也只关注数据就可以了 实际开发中可以自底向上（便于测试） 也可以自顶向下（更容易） 声名式开发    react vue">
+<meta name="twitter:description" content="支持IE8以上 Facebook退出，2013年开源  React Fiber react16之后的叫法，底层算法的改良，更加流畅 面向数据驱动的编程。只要数据改变 页面自己就会变。不用再自己操纵dom了。 理念  all in js  。CSS文件也可以引入到街上js中">
 <meta name="twitter:image" content="http://yoursite.com/2018/11/05/React-Learning-Note/react生命周期.png">
 
 
@@ -377,8 +373,7 @@
 <p>Facebook退出，2013年开源 </p>
 <p>React Fiber react16之后的叫法，底层算法的改良，更加流畅</p>
 <p>面向数据驱动的编程。只要数据改变 页面自己就会变。不用再自己操纵dom了。</p>
-<p>理念  all in js  。CSS文件也可以引入到街上js中</p>
-<p>我们也只关注数据就可以了</p>
+<p>理念  all in js  。CSS文件也可以引入到街上js中<br> <a id="more"></a><br>我们也只关注数据就可以了</p>
 <p>实际开发中可以自底向上（便于测试） 也可以自顶向下（更容易）</p>
 <p>声名式开发  </p>
 <ul>
@@ -396,7 +391,7 @@
 <p>App就是 一个组件 大写字母开头都是组件</p>
 <p>引入的react 为 引入react的语法，使其知道大写字母开头的都是组件</p>
 <p>reactdom库的意义 是把 内容挂载到 dom节点上</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="comment">//↑ 等价于 ↓</span></span><br><span class="line"><span class="comment">// import React from 'react';</span></span><br><span class="line"><span class="comment">// const Component = React.Component</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;   </span><br><span class="line">  <span class="comment">// 或 import React from 'react';</span></span><br><span class="line">  <span class="comment">// class App extends React.Component 一个 类 继承了 react.component 组件这个类之后就是 一个组件了</span></span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">//直接render标签的语法 叫 JSX</span></span><br><span class="line">    	&lt;div&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="comment">//↑ 等价于 ↓</span></span><br><span class="line"><span class="comment">// import React from 'react';</span></span><br><span class="line"><span class="comment">// const Component = React.Component</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;   </span><br><span class="line">  <span class="comment">// 或 import React from 'react';</span></span><br><span class="line">  <span class="comment">// class App extends React.Component 一个 类 继承了 react.component 组件这个类之后就是 一个组件了</span></span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">//直接render标签的语法 叫 JSX</span></span><br><span class="line">    	&lt;div&gt;&lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
 <h4 id="生命周期函数"><a href="#生命周期函数" class="headerlink" title="生命周期函数"></a>生命周期函数</h4><p>生命周期函数指在某一个时刻组件会自动调用执行的函数</p>
 <p>每个组件 不管是父组件还是子组件 都有这些生命周期函数</p>
 <p>render函数就是一个生命周期函数。（constructor其实也是，但它是ES6自带的，不算react的生命周期函数</p>
@@ -445,116 +440,6 @@
 <p>在 React 正式开启异步渲染模式之后，许多常用组件的性能将很有可能迎来一次整体的提升。进一步来说，配合异步渲染，许多现在的复杂组件都可以被处理得更加优雅，在代码层面得到更精细粒度上的控制，并最终为用户带来更加直观的使用体验。 </p>
 <p>注意，这些生命周期函数 除了 render之外 其他都可以不在在组件中进行定义 。因为 我们的组件是继承自 React.component ，内置了除 render外的 生命周期函数</p>
 <h4 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h4><p>ReactDOM.render(<app>,document.getElementById(‘root’))</app></p>
-<p>↑ App之所以是html标签形式 ，就是因为jsx的语法，而这种语法就是 需要React 模块来编译，所以必须引入React<br>vue 的 api更丰富 实现更简单 但灵活性相对较差</p>
-<p>项目的入口文件时 index.js</p>
-<p>页面展示的内容是 App.js文件 里 render出来的html</p>
-<p>App就是 一个组件 大写字母开头都是组件</p>
-<p>引入的react 为 引入react的语法，使其知道大写字母开头的都是组件</p>
-<p>reactdom库的意义 是把 内容挂载到 dom节点上</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="comment">//↑ 等价于 ↓</span></span><br><span class="line"><span class="comment">// import React from 'react';</span></span><br><span class="line"><span class="comment">// const Component = React.Component</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;   </span><br><span class="line">  <span class="comment">// 或 import React from 'react';</span></span><br><span class="line">  <span class="comment">// class App extends React.Component 一个 类 继承了 react.component 组件这个类之后就是 一个组件了</span></span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">//直接render标签的语法 叫 JSX</span></span><br><span class="line">    	&lt;div&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
-<h4 id="生命周期函数-1"><a href="#生命周期函数-1" class="headerlink" title="生命周期函数"></a>生命周期函数</h4><p>生命周期函数指在某一个时刻组件会自动调用执行的函数</p>
-<p>每个组件 不管是父组件还是子组件 都有这些生命周期函数</p>
-<p>render函数就是一个生命周期函数。（constructor其实也是，但它是ES6自带的，不算react的生命周期函数</p>
-<p><img src="/2018/11/05/React-Learning-Note/react生命周期.png" alt=""></p>
-<p>这个生命周期函数的组合在Fiber（<a href="https://zhuanlan.zhihu.com/p/26027085" target="_blank" rel="noopener">React Fiber是什么</a>）之后就显得不合适了，因为，<strong>如果要开启async rendering，在render函数之前的所有函数，都有可能被执行多次。</strong> </p>
-<p>v16.3新增了两个生命周期函数</p>
-<p><img src="/2018/11/05/React-Learning-Note/新版react生命周期.jpg" alt="新版react生命周期"></p>
-<ul>
-<li><p>初始化  在 constructor 进行 定义了state</p>
-</li>
-<li><p>mounting  </p>
-<ul>
-<li><code>v17.0将被删除</code> componentWillMount 在组件即将被挂载到页面的时刻自动执行（第一次挂载的时候      用例 ： 解决首页渲染白屏 </li>
-<li>render  挂载</li>
-<li>componentDidMount  组件被挂载到页面之后被自动执行（第一次挂载的时候  </li>
-</ul>
-</li>
-<li><p>updation</p>
-<ul>
-<li>shouldComponentUpdate  组件被更新前，会自动执行  （要return true   组件需要被更新吗？可以使组件不做无谓的render</li>
-<li><code>v17.0将被删除</code>  componentWillUpdate 组件被更新之前，shouldComponentUpdata之后 根据其返回结果 执行</li>
-<li>render</li>
-<li>componentDidUpdate 组件更新完之后 执行</li>
-<li><code>v17.0将被删除</code> componentWillReceiveProps    一个组件要从父组件接收参数，（只要父组件的render函数被重新执行了，子组件的这个生命周期函数就会被执行）  如果这个组件第一次存在于父组件中，不会执行。如果这个组件之前已经存在于父组件中，才会执行</li>
-</ul>
-</li>
-<li><p>unmounting </p>
-<ul>
-<li>componentWillUnmount   当这个组件即将被从页面中剔除的时候，执行   （例：todoitem 条目被删除的时候  render -》 componentWillUnmount -》 componentDidUpdate</li>
-</ul>
-</li>
-<li><p>getDerivedStateFromProps </p>
-<p>无论是Mounting还是Updating，也无论是因为什么引起的Updating，全部都会被调用。 所以生命周期图 那里  getDerivedStateFromProps 要延长</p>
-</li>
-</ul>
-<p>  通常来讲，在 <code>componentWillReceiveProps</code> 中，我们一般会做以下两件事，一是根据 props 来更新 state，二是触发一些回调，如动画或页面跳转等。在老版本的 React 中，这两件事我们都需要在 <code>componentWillReceiveProps</code> 中去做。而在新版本中，官方将更新 state 与触发回调重新分配到了 <code>getDerivedStateFromProps</code> 与 <code>componentDidUpdate</code> 中，使得组件整体的更新逻辑更为清晰。而且在 <code>getDerivedStateFromProps</code> 中还禁止了组件去访问 this.props，强制让开发者去比较 nextProps 与 prevState 中的值，以确保当开发者用到 <code>getDerivedStateFromProps</code> 这个生命周期函数时，就是在根据当前的 props 来更新组件的 state，而不是去做其他一些让组件自身状态变得更加不可预测的事情。 </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// before</span></span><br><span class="line">componentWillReceiveProps(nextProps) &#123;  </span><br><span class="line">  <span class="keyword">if</span> (nextProps.translateX !== <span class="keyword">this</span>.props.translateX) &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123; </span><br><span class="line">      translateX: nextProps.translateX, </span><br><span class="line">    &#125;); </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// after</span></span><br><span class="line"><span class="keyword">static</span> getDerivedStateFromProps(nextProps, prevState) &#123;</span><br><span class="line">  <span class="keyword">if</span> (nextProps.translateX !== prevState.translateX) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      translateX: nextProps.translateX,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>getSnapshotBeforeUpdate(prevProps, prevState)</p>
-<p>与 <code>componentWillUpdate</code> 不同，<code>getSnapshotBeforeUpdate</code> 会在最终的 render 之前被调用，也就是说在 <code>getSnapshotBeforeUpdate</code> 中读取到的 DOM 元素状态是可以保证与 <code>componentDidUpdate</code> 中一致的。虽然 <code>getSnapshotBeforeUpdate</code> 不是一个静态方法，但我们也应该尽量使用它去返回一个值。这个值会随后被传入到 <code>componentDidUpdate</code> 中，然后我们就可以在 <code>componentDidUpdate</code> 中去更新组件的状态，而不是在 <code>getSnapshotBeforeUpdate</code> 中直接更新组件状态。 </p>
-</li>
-<li><p>componentDidCatch(error, info)   错误处理函数 像 try…catch</p>
-</li>
-</ul>
-<p>setState包含副作用</p>
-<p>在 React 正式开启异步渲染模式之后，许多常用组件的性能将很有可能迎来一次整体的提升。进一步来说，配合异步渲染，许多现在的复杂组件都可以被处理得更加优雅，在代码层面得到更精细粒度上的控制，并最终为用户带来更加直观的使用体验。 </p>
-<p>注意，这些生命周期函数 除了 render之外 其他都可以不在在组件中进行定义 。因为 我们的组件是继承自 React.component ，内置了除 render外的 生命周期函数</p>
-<h4 id="JSX-1"><a href="#JSX-1" class="headerlink" title="JSX"></a>JSX</h4><p>ReactDOM.render(<app>,document.getElementById(‘root’))</app></p>
-<p>↑ App之所以是html标签形式 ，就是因为jsx的语法，而这种语法就是 需要React 模块来编译，所以必须引入Reactvue 的 api更丰富 实现更简单 但灵活性相对较差</p>
-<p>项目的入口文件时 index.js</p>
-<p>页面展示的内容是 App.js文件 里 render出来的html</p>
-<p>App就是 一个组件 大写字母开头都是组件</p>
-<p>引入的react 为 引入react的语法，使其知道大写字母开头的都是组件</p>
-<p>reactdom库的意义 是把 内容挂载到 dom节点上</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="comment">//↑ 等价于 ↓</span></span><br><span class="line"><span class="comment">// import React from 'react';</span></span><br><span class="line"><span class="comment">// const Component = React.Component</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;   </span><br><span class="line">  <span class="comment">// 或 import React from 'react';</span></span><br><span class="line">  <span class="comment">// class App extends React.Component 一个 类 继承了 react.component 组件这个类之后就是 一个组件了</span></span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">//直接render标签的语法 叫 JSX</span></span><br><span class="line">    	&lt;div&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
-<h4 id="生命周期函数-2"><a href="#生命周期函数-2" class="headerlink" title="生命周期函数"></a>生命周期函数</h4><p>生命周期函数指在某一个时刻组件会自动调用执行的函数</p>
-<p>每个组件 不管是父组件还是子组件 都有这些生命周期函数</p>
-<p>render函数就是一个生命周期函数。（constructor其实也是，但它是ES6自带的，不算react的生命周期函数</p>
-<p><img src="/2018/11/05/React-Learning-Note/react生命周期.png" alt=""></p>
-<p>这个生命周期函数的组合在Fiber（<a href="https://zhuanlan.zhihu.com/p/26027085" target="_blank" rel="noopener">React Fiber是什么</a>）之后就显得不合适了，因为，<strong>如果要开启async rendering，在render函数之前的所有函数，都有可能被执行多次。</strong> </p>
-<p>v16.3新增了两个生命周期函数</p>
-<p><img src="/2018/11/05/React-Learning-Note/新版react生命周期.jpg" alt="新版react生命周期"></p>
-<ul>
-<li><p>初始化  在 constructor 进行 定义了state</p>
-</li>
-<li><p>mounting  </p>
-<ul>
-<li><code>v17.0将被删除</code> componentWillMount 在组件即将被挂载到页面的时刻自动执行（第一次挂载的时候      用例 ： 解决首页渲染白屏 </li>
-<li>render  挂载</li>
-<li>componentDidMount  组件被挂载到页面之后被自动执行（第一次挂载的时候  </li>
-</ul>
-</li>
-<li><p>updation</p>
-<ul>
-<li>shouldComponentUpdate  组件被更新前，会自动执行  （要return true   组件需要被更新吗？可以使组件不做无谓的render</li>
-<li><code>v17.0将被删除</code>  componentWillUpdate 组件被更新之前，shouldComponentUpdata之后 根据其返回结果 执行</li>
-<li>render</li>
-<li>componentDidUpdate 组件更新完之后 执行</li>
-<li><code>v17.0将被删除</code> componentWillReceiveProps    一个组件要从父组件接收参数，（只要父组件的render函数被重新执行了，子组件的这个生命周期函数就会被执行）  如果这个组件第一次存在于父组件中，不会执行。如果这个组件之前已经存在于父组件中，才会执行</li>
-</ul>
-</li>
-<li><p>unmounting </p>
-<ul>
-<li>componentWillUnmount   当这个组件即将被从页面中剔除的时候，执行   （例：todoitem 条目被删除的时候  render -》 componentWillUnmount -》 componentDidUpdate</li>
-</ul>
-</li>
-<li><p>getDerivedStateFromProps </p>
-<p>无论是Mounting还是Updating，也无论是因为什么引起的Updating，全部都会被调用。 所以生命周期图 那里  getDerivedStateFromProps 要延长</p>
-</li>
-</ul>
-<p>  通常来讲，在 <code>componentWillReceiveProps</code> 中，我们一般会做以下两件事，一是根据 props 来更新 state，二是触发一些回调，如动画或页面跳转等。在老版本的 React 中，这两件事我们都需要在 <code>componentWillReceiveProps</code> 中去做。而在新版本中，官方将更新 state 与触发回调重新分配到了 <code>getDerivedStateFromProps</code> 与 <code>componentDidUpdate</code> 中，使得组件整体的更新逻辑更为清晰。而且在 <code>getDerivedStateFromProps</code> 中还禁止了组件去访问 this.props，强制让开发者去比较 nextProps 与 prevState 中的值，以确保当开发者用到 <code>getDerivedStateFromProps</code> 这个生命周期函数时，就是在根据当前的 props 来更新组件的 state，而不是去做其他一些让组件自身状态变得更加不可预测的事情。 </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// before</span></span><br><span class="line">componentWillReceiveProps(nextProps) &#123;  </span><br><span class="line">  <span class="keyword">if</span> (nextProps.translateX !== <span class="keyword">this</span>.props.translateX) &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123; </span><br><span class="line">      translateX: nextProps.translateX, </span><br><span class="line">    &#125;); </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// after</span></span><br><span class="line"><span class="keyword">static</span> getDerivedStateFromProps(nextProps, prevState) &#123;</span><br><span class="line">  <span class="keyword">if</span> (nextProps.translateX !== prevState.translateX) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      translateX: nextProps.translateX,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>getSnapshotBeforeUpdate(prevProps, prevState)</p>
-<p>与 <code>componentWillUpdate</code> 不同，<code>getSnapshotBeforeUpdate</code> 会在最终的 render 之前被调用，也就是说在 <code>getSnapshotBeforeUpdate</code> 中读取到的 DOM 元素状态是可以保证与 <code>componentDidUpdate</code> 中一致的。虽然 <code>getSnapshotBeforeUpdate</code> 不是一个静态方法，但我们也应该尽量使用它去返回一个值。这个值会随后被传入到 <code>componentDidUpdate</code> 中，然后我们就可以在 <code>componentDidUpdate</code> 中去更新组件的状态，而不是在 <code>getSnapshotBeforeUpdate</code> 中直接更新组件状态。 </p>
-</li>
-<li><p>componentDidCatch(error, info)   错误处理函数 像 try…catch</p>
-</li>
-</ul>
-<p>setState包含副作用</p>
-<p>在 React 正式开启异步渲染模式之后，许多常用组件的性能将很有可能迎来一次整体的提升。进一步来说，配合异步渲染，许多现在的复杂组件都可以被处理得更加优雅，在代码层面得到更精细粒度上的控制，并最终为用户带来更加直观的使用体验。 </p>
-<p>注意，这些生命周期函数 除了 render之外 其他都可以不在在组件中进行定义 。因为 我们的组件是继承自 React.component ，内置了除 render外的 生命周期函数</p>
-<h4 id="JSX-2"><a href="#JSX-2" class="headerlink" title="JSX"></a>JSX</h4><p>ReactDOM.render(<app>,document.getElementById(‘root’))</app></p>
 <p>↑ App之所以是html标签形式 ，就是因为jsx的语法，而这种语法就是 需要React 模块来编译，所以必须引入React</p>
 <p><strong>内容过多，继续阅读请</strong><a href="https://github.com/TinyD0409/tinyd0409.github.io/blob/master/miao/react/React.md" target="_blank" rel="noopener">点这里</a></p>
 
@@ -751,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#与vue对比"><span class="nav-number">1.</span> <span class="nav-text">与vue对比</span></a></li></ol><li class="nav-item nav-level-4"><a class="nav-link" href="#生命周期函数"><span class="nav-number"></span> <span class="nav-text">生命周期函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSX"><span class="nav-number"></span> <span class="nav-text">JSX</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生命周期函数-1"><span class="nav-number"></span> <span class="nav-text">生命周期函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSX-1"><span class="nav-number"></span> <span class="nav-text">JSX</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生命周期函数-2"><span class="nav-number"></span> <span class="nav-text">生命周期函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSX-2"><span class="nav-number"></span> <span class="nav-text">JSX</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#与vue对比"><span class="nav-number">1.</span> <span class="nav-text">与vue对比</span></a></li></ol><li class="nav-item nav-level-4"><a class="nav-link" href="#生命周期函数"><span class="nav-number"></span> <span class="nav-text">生命周期函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSX"><span class="nav-number"></span> <span class="nav-text">JSX</span></a></li></div>
             
 
           </div>
